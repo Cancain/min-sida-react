@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Presentation from './Presentation/Presentation';
+import style from './Splash.module.css';
 
 const splash = (props) => {
     return (
-        <div>
-            <p>splash</p>
+        <Fragment>
             <Presentation />
-        </div>
+        </Fragment>
     )
 }
 

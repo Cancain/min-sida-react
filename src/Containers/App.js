@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import Layout from '../hoc/Layout/layout';
+import Layout from '../hoc/Layout/Layout';
 
 
 class App extends Component {

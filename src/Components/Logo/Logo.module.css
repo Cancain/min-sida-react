@@ -1,0 +1,29 @@
+
+
+.Logo{  
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    border-radius: 10px 100px / 120px;
+    box-shadow: 17px 14px 52px 0px rgba(0,0,0,0.75);
+    padding: 0;
+    
+}
+
+.Logo h1 {
+    margin: auto;
+    color: #728687; 
+    opacity: 0.5;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+}
+
+@media (min-width: 1024px){
+    .Logo {
+        
+    }
+
+    .Logo h1 {
+        font-size: 5rem;
+    }
+}
