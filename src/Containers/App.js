@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import Example from '../Components/Example/Example';
+import Layout from '../hoc/Layout/layout';
 
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Example />
+        <Layout />
       </div>
     );
   }
