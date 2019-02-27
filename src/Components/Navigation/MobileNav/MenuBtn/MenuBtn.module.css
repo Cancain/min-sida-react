@@ -57,18 +57,21 @@
     animation-fill-mode: forwards
 }
 .MenuBtn .Line1Closed {
+    transform: translate(10px, 13px) rotate(50deg) scale(0.6, 1);
     animation-name: menuClosed1;
     animation-duration: 1s;
     animation-fill-mode: forwards
 }
 
 .MenuBtn .Line2Closed {
+    opacity: 0;
     animation-name: menuClosed2;
     animation-duration: 1s;
     animation-fill-mode: forwards
 }
 
 .MenuBtn .Line3Closed {
+    transform: translate(10px, -13px) rotate(-50deg) scale(0.6, 1);
     animation-name: menuClosed3;
     animation-duration: 1s;
     animation-fill-mode: forwards
