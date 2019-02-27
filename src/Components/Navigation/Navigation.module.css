@@ -1,3 +1,14 @@
 .Navigation {
-    position: fixed;
+    background: #163436;
+    width: 100vw;
+    height: 70px;
+    box-shadow: 1px 1px 1px 1px;
+}
+
+@media (min-width: 1024px){
+    .Navigation {
+        position: fixed;
+    }
+
+    
 }

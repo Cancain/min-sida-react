@@ -6,6 +6,16 @@ import MobileNav from './MobileNav/MobileNav';
 
 
 class Navigation extends Component {
+
+    state = {
+        sideDrawerOpen: false
+    }
+
+    sideDrawerHandler = () => {
+        this.setState({ sideDrawerOpen: !this.state.sideDrawerOpen });
+        console.log(this.state.sideDrawerOpen);
+    }
+
     render() {
         //Stores what nav should render for big screens
         const bigNav = (
@@ -14,7 +24,10 @@ class Navigation extends Component {
 
         //Stores what nav should render for small screens
         const smallNav = (
-            <MobileNav />
+            <MobileNav
+                menuOpened={(event) => this.sideDrawerHandler(event)}
+                menuOpen={this.state.sideDrawerOpen}
+            />
         )
 
         const breakPoint = 1024;

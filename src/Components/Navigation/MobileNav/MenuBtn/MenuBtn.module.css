@@ -1,0 +1,75 @@
+@keyframes menuOpen1 {
+    to{transform: translate(10px, 13px) rotate(50deg) scale(0.6, 1)}    
+}
+@keyframes menuOpen2 {
+    to{opacity: 0}
+}
+@keyframes menuOpen3 {
+    to{transform: translate(10px, -13px) rotate(-50deg) scale(0.6, 1)}
+}
+@keyframes menuClosed1 {
+    to{transform: translate(0px, 0px) rotate(0deg) scale(1, 1)}         
+}
+@keyframes menuClosed2 {
+    to{opacity: 1}
+}
+@keyframes menuClosed3 {
+    to{transform: translate(0px, 0px) rotate(0deg) scale(1, 1)}   
+}
+
+.MenuBtn {
+    position: relative;
+    font-weight: bolder;
+    color: #728687;
+    left: 75vw;
+    background-color: #163436;
+    padding: 4px;
+    opacity: 0.7;
+    padding: 20px 0 0 0;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.MenuBtn div {
+    width: 65px;
+    height: 8px;
+    
+    background-color: #728687;
+    margin: 0 0 5px 0;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+}
+
+.MenuBtn .Line1 {
+    animation-name: menuOpen1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.MenuBtn .Line2 {
+    animation-name: menuOpen2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.MenuBtn .Line3 {
+    animation-name: menuOpen3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+.MenuBtn .Line1Closed {
+    animation-name: menuClosed1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.MenuBtn .Line2Closed {
+    animation-name: menuClosed2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
+
+.MenuBtn .Line3Closed {
+    animation-name: menuClosed3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards
+}
