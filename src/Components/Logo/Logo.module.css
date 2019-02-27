@@ -1,16 +1,25 @@
 
 
 .Logo{  
-    text-align: center;
-    
+    text-align: start;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0 0 0 1rem;
+    color: #728687; 
 }
 
 .Logo h1 {
     margin: auto;
-    color: #728687; 
-    opacity: 0.5;
-    font-size: 2.5rem;
+    opacity: 0.8;
+    font-size: 3rem;
     text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    line-height: 4rem;    
+}
+
+.Logo p {
+    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    font-size: 1.3rem;
+    font-stretch: expanded;
+    margin: 0 0 0 0rem;
 }
 
 @media (min-width: 1024px){
@@ -19,6 +28,11 @@
     }
 
     .Logo h1 {
-        font-size: 5rem;
+        line-height: 7.5rem;
+        font-size: 7rem;
+    }
+
+    .Logo p {
+        font-size: 3rem;
     }
 }
