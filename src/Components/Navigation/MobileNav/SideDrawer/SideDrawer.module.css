@@ -1,0 +1,15 @@
+@keyframes slideIn{
+    to{left: 0;}
+}
+
+.SideDrawer {
+    position: fixed;
+    left: -300px;
+    width: 70vw;
+    height: 100vh;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}

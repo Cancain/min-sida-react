@@ -11,6 +11,7 @@ class Navigation extends Component {
         sideDrawerOpen: false
     }
 
+
     sideDrawerHandler = () => {
         this.setState({ sideDrawerOpen: !this.state.sideDrawerOpen });
         console.log(this.state.sideDrawerOpen);
@@ -22,15 +23,16 @@ class Navigation extends Component {
             <NavItem />
         )
 
+        const breakPoint = 1024;
+
         //Stores what nav should render for small screens
         const smallNav = (
             <MobileNav
                 menuOpened={(event) => this.sideDrawerHandler(event)}
                 menuOpen={this.state.sideDrawerOpen}
+                breakPoint={breakPoint}
             />
         )
-
-        const breakPoint = 1024;
 
         //Outputs different navs depending on the windows width
         let nav;

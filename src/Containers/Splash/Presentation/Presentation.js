@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import Logo from '../../../Components/Logo/Logo';
 import style from './Presentation.module.css'

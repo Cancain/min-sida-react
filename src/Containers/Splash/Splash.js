@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import Presentation from './Presentation/Presentation';
-import style from './Splash.module.css';
+// import style from './Splash.module.css';
 
 const splash = (props) => {
     return (
