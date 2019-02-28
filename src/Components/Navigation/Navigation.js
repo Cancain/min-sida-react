@@ -19,7 +19,6 @@ class Navigation extends Component {
 
     sideDrawerHandler = () => {
         this.setState({ sideDrawerOpen: !this.state.sideDrawerOpen });
-        console.log(this.state.sideDrawerOpen);
     }
 
     render() {
@@ -28,6 +27,7 @@ class Navigation extends Component {
             <NavItem />
         )
 
+        //A breakpoint for switching between mobile and desktop layout 
         const breakPoint = 1024;
 
         //Stores what nav should render for small screens
@@ -48,7 +48,9 @@ class Navigation extends Component {
 
         return (
             <div className={style.Navigation}>
+                <h2>Tomas Eriksson</h2>
                 {nav}
+
             </div>
         )
     }

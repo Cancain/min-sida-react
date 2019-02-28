@@ -6,6 +6,8 @@ import NavItem from '../../NavItem/NavItem';
 
 const sideDrawer = (props) => {
 
+    //maps the menuitem array from the state in Navigation
+    //renders a navitem for each member of the array
     let navItemHandler = props.menuItems.map(item => {
         return <NavItem text={item.text} key={item.id} />
     });
