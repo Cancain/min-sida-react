@@ -8,7 +8,12 @@ import MobileNav from './MobileNav/MobileNav';
 class Navigation extends Component {
 
     state = {
-        sideDrawerOpen: false
+        sideDrawerOpen: false,
+        menuItems: [
+            { text: 'about me', id: 0 },
+            { text: 'portfolio', id: 1 },
+            { text: 'contact', id: 2 }
+        ]
     }
 
 
@@ -28,6 +33,7 @@ class Navigation extends Component {
         //Stores what nav should render for small screens
         const smallNav = (
             <MobileNav
+                menuItems={this.state.menuItems}
                 menuOpened={(event) => this.sideDrawerHandler(event)}
                 menuOpen={this.state.sideDrawerOpen}
                 breakPoint={breakPoint}

@@ -10,7 +10,10 @@ const mobileNav = (props) => {
     let sideDrawer = null;
     if (window.innerWidth <= props.breakPoint &&
         props.menuOpen) {
-        sideDrawer = <SideDrawer />;
+        sideDrawer =
+            <SideDrawer
+                menuItems={props.menuItems}
+            />;
     }
     return (
         <div>
