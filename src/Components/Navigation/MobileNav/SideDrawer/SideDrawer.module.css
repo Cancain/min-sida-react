@@ -12,9 +12,9 @@
     width: 70vw;
     height: 100vh;
     z-index: 200;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     animation-name: slideIn;
-    animation-duration: 1s;
+    animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
 
@@ -24,8 +24,8 @@
     width: 70vw;
     height: 100vh;
     z-index: 200;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     animation-name: slideOut;
-    animation-duration: 1s;
+    animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }

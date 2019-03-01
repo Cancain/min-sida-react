@@ -10,6 +10,8 @@ class Layout extends Component {
         currentPage: 'contact'
     }
 
+    //Responds to a click on a navitem 
+    //and sets the state of currentPage to the clicked nav item
     pageHandler = (event) => {
         const page = event;
         this.setState({ currentPage: page })
@@ -18,6 +20,8 @@ class Layout extends Component {
     render() {
         let page = null;
 
+        //Renders the proper "page" depending on the cirrentPage state
+        //If any unexpected value shows up in currentPage the "home" page will render 
         switch (this.state.currentPage) {
             case 'home':
                 page = <Splash />

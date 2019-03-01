@@ -17,6 +17,12 @@ class Navigation extends Component {
         ]
     }
 
+    NavItemClickHandler = (event) => {
+        this.props.navItemClicked(event)
+        this.sideDrawerHandler();
+    }
+
+    //Sets the staus of sideDrawerOpen to it's opposite
     sideDrawerHandler = () => {
         this.setState({ sideDrawerOpen: !this.state.sideDrawerOpen });
     }
@@ -37,7 +43,7 @@ class Navigation extends Component {
                 menuOpened={(event) => this.sideDrawerHandler(event)}
                 menuOpen={this.state.sideDrawerOpen}
                 breakPoint={breakPoint}
-                navItemClicked={(event) => this.props.navItemClicked(event)}
+                navItemClicked={(event) => this.NavItemClickHandler(event)}
             />
         )
 
