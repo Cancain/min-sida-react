@@ -1,5 +1,28 @@
+@keyframes fadeIn{
+    to{background-color: rgba(0, 0, 0, 0.9)}
+}
+
+@keyframes fadeOut{
+    to{background-color: rgba(0, 0, 0, 0.0)}
+}
+
 .Backdrop {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.0);
     width: 100vw;
     height: 100vh;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
+    
+}
+
+.BackdropClosed {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    height: 100vh;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    position: fixed;
 }

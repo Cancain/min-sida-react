@@ -4,7 +4,8 @@ import style from './Backdrop.module.css';
 
 const backdrop = (props) => {
     return (
-        <div className={style.Backdrop}></div>
+        <div className={props.open ? style.Backdrop : style.BackdropClosed}>
+        </div>
     )
 }
 

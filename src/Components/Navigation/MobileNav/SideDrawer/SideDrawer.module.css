@@ -2,14 +2,30 @@
     to{left: 0;}
 }
 
+@keyframes slideOut{
+    to{left: -300px}
+}
+
 .SideDrawer {
     position: fixed;
     left: -300px;
     width: 70vw;
     height: 100vh;
     z-index: 200;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.1);
     animation-name: slideIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.MenuClosed{
+    position: fixed;
+    left: 0px;
+    width: 70vw;
+    height: 100vh;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.1);
+    animation-name: slideOut;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }

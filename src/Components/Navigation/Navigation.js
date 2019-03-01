@@ -10,12 +10,12 @@ class Navigation extends Component {
     state = {
         sideDrawerOpen: false,
         menuItems: [
-            { text: 'about me', id: 0 },
-            { text: 'portfolio', id: 1 },
-            { text: 'contact', id: 2 }
+            { text: 'home', id: 0 },
+            { text: 'about', id: 1 },
+            { text: 'portfolio', id: 2 },
+            { text: 'contact', id: 3 }
         ]
     }
-
 
     sideDrawerHandler = () => {
         this.setState({ sideDrawerOpen: !this.state.sideDrawerOpen });
@@ -37,6 +37,7 @@ class Navigation extends Component {
                 menuOpened={(event) => this.sideDrawerHandler(event)}
                 menuOpen={this.state.sideDrawerOpen}
                 breakPoint={breakPoint}
+                navItemClicked={(event) => this.props.navItemClicked(event)}
             />
         )
 
@@ -48,9 +49,8 @@ class Navigation extends Component {
 
         return (
             <div className={style.Navigation}>
-                <h2>Tomas Eriksson</h2>
+                <h2>Tomas <br></br> Eriksson</h2>
                 {nav}
-
             </div>
         )
     }
