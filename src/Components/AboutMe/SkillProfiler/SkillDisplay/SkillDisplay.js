@@ -1,6 +1,7 @@
 import React from 'react';
 
 import style from './SkillDisplay.module.css';
+import Skillmeter from './Skillmeter/Skillmeter';
 
 const skillDisplay = (props) => {
 
@@ -10,9 +11,9 @@ const skillDisplay = (props) => {
                 className={style.SkillDisplay}
                 key={item.index}
             >
-                <ul>{item.name}
+                <ul>{item.name}<Skillmeter level={item.level} />
                     {item.subItems.map(sub => {
-                        return <li key={sub.index}>{sub.name}</li>
+                        return <li key={sub.index}>{sub.name} <Skillmeter level={sub.level} /></li>
                     })}
                 </ul>
             </div>
