@@ -1,0 +1,11 @@
+
+.Drawers {
+    box-sizing: border-box;    
+    width: 100vw;
+    height: fit-content;
+    margin-top: 5px;
+}
+
+.Drawers p {
+    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+}

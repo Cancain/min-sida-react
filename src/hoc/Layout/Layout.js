@@ -3,11 +3,14 @@ import React, { Component } from 'react';
 import Splash from '../../Containers/Splash/Splash';
 import Navigation from '../../Components/Navigation/Navigation';
 import style from './Layout.module.css';
+import AboutMe from '../../Components/AboutMe/AboutMe';
+import Portfolio from '../../Components/Portfolio/Portfolio';
+import Contact from '../../Components/Contact/Contact';
 
 class Layout extends Component {
 
     state = {
-        currentPage: 'contact'
+        currentPage: 'about'
     }
 
     //Responds to a click on a navitem 
@@ -20,23 +23,29 @@ class Layout extends Component {
     render() {
         let page = null;
 
+        //Constants holding the different pages
+        const home = <Splash />
+        const aboutMe = <AboutMe />
+        const portfolio = <Portfolio />
+        const contact = <Contact />
+
         //Renders the proper "page" depending on the cirrentPage state
         //If any unexpected value shows up in currentPage the "home" page will render 
         switch (this.state.currentPage) {
             case 'home':
-                page = <Splash />
+                page = home;
                 break;
             case 'about':
-                page = <h1>About me</h1>
+                page = aboutMe;
                 break;
             case 'portfolio':
-                page = <h1>Portfolio</h1>
+                page = portfolio;
                 break;
             case 'contact':
-                page = <h1>Contact me</h1>
+                page = contact;
                 break;
             default:
-                page = <Splash />
+                page = home;
                 break;
         }
 

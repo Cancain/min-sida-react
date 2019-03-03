@@ -1,0 +1,18 @@
+.SkillDisplay {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.SkillDisplay ul {
+    list-style-type: none;
+    font-size: 1.4rem;
+    padding: 0;
+    text-align: start;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.SkillDisplay li {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 0 0 0 20px;
+}

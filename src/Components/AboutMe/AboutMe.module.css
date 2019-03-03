@@ -1,0 +1,30 @@
+.AboutMe {
+    text-align: center;
+    color: #728687;
+    margin: 5px 0 0 0;
+}
+
+.AboutMe h1{
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+}
+
+.AboutMe h3 {
+    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 2rem;
+}
+
+.AboutMe p {
+    margin: 1rem 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.wrapper {
+    box-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    margin: auto;
+    width: 80vw;
+    background-color: rgba(0,0,0,0.3);
+    padding: 2px;
+}
