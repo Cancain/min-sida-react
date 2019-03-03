@@ -1,0 +1,28 @@
+.Skillmeter{
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: 80%;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 7px;
+    padding: 5px;
+    margin-left: 5px;
+    padding-right: 8px;
+    box-shadow: 1px 1px 0 black, 2px 2px 0 black;
+}
+
+.Bar {
+    flex-direction: column;
+    width: 20%;
+    height: 10px;    
+    margin-left: 3px;
+    box-shadow: 1px 1px 0 black, 2px 2px 0 black;
+}
+
+.inactive {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.active {
+    background-color: green;
+}
