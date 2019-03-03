@@ -11,9 +11,16 @@ const skillDisplay = (props) => {
                 className={style.SkillDisplay}
                 key={item.index}
             >
-                <ul>{item.name}<Skillmeter level={item.level} />
+                <ul>
+                    <h4>{item.name}</h4>
+                    <Skillmeter level={item.level}
+                    />
                     {item.subItems.map(sub => {
-                        return <li key={sub.index}>{sub.name} <Skillmeter level={sub.level} /></li>
+                        return <li key={sub.index}>
+                            <p>{sub.name}</p>
+                            <Skillmeter level={sub.level}
+                            />
+                        </li>
                     })}
                 </ul>
             </div>

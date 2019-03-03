@@ -121,7 +121,7 @@ class SkillProfiler extends Component {
                     },
                     {
                         index: '6b',
-                        name: 'Speaking',
+                        name: 'Spoken',
                         level: 4
                     },
                 ]

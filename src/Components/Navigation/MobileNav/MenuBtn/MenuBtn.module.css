@@ -21,18 +21,21 @@
     position: relative;
     font-weight: bolder;
     color: #728687;
-    left: 75vw;
+    left: 83vw;
+    top: 15px;
     padding: 4px;
+    padding-bottom: 0;
     width: fit-content;
-    margin: 20px 0 0 0;
+    margin: 0 0 23px 0;
     display: inline-block;
     z-index: 200;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .MenuBtn div {
-    width: 65px;
-    height: 8px;
-    
+    width: 45px;
+    height: 8px;    
     background-color: #728687;
     margin: 0 0 5px 0;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);

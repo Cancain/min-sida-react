@@ -33,9 +33,15 @@ const aboutMe = (props) => {
             </Drawers>
 
             <Drawers
-                description={'My skills'}
+                description={'My Skills'}
             >
                 <SkillProfiler />
+            </Drawers>
+
+            <Drawers
+                description={'My Courses'}
+            >
+
             </Drawers>
 
         </div >

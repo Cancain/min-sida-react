@@ -14,7 +14,6 @@ class Skillmeter extends Component {
         for (let i = 0; i < this.props.level; i++) {
             this.skill[i] = true;
         };
-        console.log(this.skill);
     }
 
 
