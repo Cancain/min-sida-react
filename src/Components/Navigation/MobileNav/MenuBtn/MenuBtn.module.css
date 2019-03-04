@@ -1,11 +1,13 @@
+
+  
 @keyframes menuOpen1 {
-    to{transform: translate(0px, 13px) rotate(50deg) scale(0.6, 1)}    
+    to{transform: translate(0px, 13px) rotate(50deg) scale(1, 1)}    
 }
 @keyframes menuOpen2 {
     to{opacity: 0}
 }
 @keyframes menuOpen3 {
-    to{transform: translate(0px, -13px) rotate(-50deg) scale(0.6, 1)}
+    to{transform: translate(0px, -13px) rotate(-50deg) scale(1, 1)}
 }
 @keyframes menuClosed1 {
     to{transform: translate(0px, 0px) rotate(0deg) scale(1, 1)}         

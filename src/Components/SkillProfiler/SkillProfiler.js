@@ -31,7 +31,7 @@ class SkillProfiler extends Component {
                     {
                         index: '0a',
                         name: 'React',
-                        level: 4
+                        level: 3
                     },
                     {
                         index: '0b',
