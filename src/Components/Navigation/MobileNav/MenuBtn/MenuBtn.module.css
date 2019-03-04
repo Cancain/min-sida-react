@@ -1,6 +1,4 @@
-
-  
-@keyframes menuOpen1 {
+ @keyframes menuOpen1 {
     to{transform: translate(0px, 13px) rotate(50deg) scale(1, 1)}    
 }
 @keyframes menuOpen2 {
@@ -52,7 +50,7 @@
 
 .MenuBtn .Line2 {
     animation-name: menuOpen2;
-    animation-duration: 0.4s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards
 }
 
@@ -69,9 +67,8 @@
 }
 
 .MenuBtn .Line2Closed {
-    opacity: 1;
     animation-name: menuClosed2;
-    animation-duration: 0.4s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards
 }
 

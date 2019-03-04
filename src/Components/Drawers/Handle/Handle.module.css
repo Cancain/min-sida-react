@@ -22,3 +22,12 @@
     text-align: end;
     right: 10px;
 }
+
+.subDrawer {
+    background-color: #253839; 
+    height: 15px;   
+}
+
+.subDrawer p {
+    font-size: 1rem;
+}
