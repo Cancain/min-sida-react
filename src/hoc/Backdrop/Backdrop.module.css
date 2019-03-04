@@ -1,5 +1,5 @@
 @keyframes fadeIn{
-    to{background-color: rgba(0, 0, 0, 0.9)}
+    to{background-color: rgba(0, 0, 0, 0.7)}
 }
 
 @keyframes fadeOut{
@@ -18,7 +18,7 @@
 }
 
 .BackdropClosed {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100vw;
     height: 100vh;
     animation-name: fadeOut;

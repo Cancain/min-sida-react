@@ -1,4 +1,7 @@
 .Navigation {
+    position: fixed;
+    z-index: 3;
+    top: 0;
     background: #163436;
     width: 100vw;
     height: 70px;

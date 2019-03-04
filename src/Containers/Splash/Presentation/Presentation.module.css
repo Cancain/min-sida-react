@@ -1,5 +1,6 @@
 .Presentation {
     width: 100vw;
+    margin: 50% 0 0 0;
 }
 
 @media (min-width: 1024px){
