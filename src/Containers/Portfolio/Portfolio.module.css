@@ -1,0 +1,11 @@
+.Portfolio {
+    margin: 25% 0 0 0;
+}
+
+.Portfolio h1 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.5rem;
+    color: #728687;
+}
