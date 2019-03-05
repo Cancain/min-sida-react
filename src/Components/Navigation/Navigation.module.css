@@ -17,10 +17,14 @@
     color: #728687;
 }
 
+.BigNav {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
 @media (min-width: 1024px){
     .Navigation {
         position: fixed;
-    }
-
-    
+    }    
 }

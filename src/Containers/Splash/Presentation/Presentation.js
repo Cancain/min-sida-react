@@ -9,6 +9,11 @@ const presentation = (props) => {
             <div className={style.Logo}>
                 <Logo />
             </div>
+            <div className={style.MediaIcons}>
+                <i className="fab fa-github-square"></i>
+                <i className="fab fa-twitter-square"></i>
+                <i className="fab fa-linkedin"></i>
+            </div>
         </div>
     )
 }

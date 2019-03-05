@@ -28,13 +28,15 @@ class Navigation extends Component {
     }
 
     render() {
-        //Stores what nav should render for big screens
-        const bigNav = (
-            <NavItem />
-        )
-
         //A breakpoint for switching between mobile and desktop layout 
         const breakPoint = 1024;
+
+        //Stores what nav should render for big screens
+        const bigNav = (
+            <div className={style.BigNav}>
+                <p>Big Nav</p>
+            </div>
+        )
 
         //Stores what nav should render for small screens
         const smallNav = (
@@ -56,7 +58,7 @@ class Navigation extends Component {
 
         return (
             <div className={style.Navigation}>
-                <h2>Tomas <br></br> Eriksson</h2>
+                <h2>Tomas<br></br>Eriksson</h2>
                 {nav}
             </div>
         )

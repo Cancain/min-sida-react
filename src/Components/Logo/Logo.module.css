@@ -9,30 +9,25 @@
 
 .Logo h1 {
     margin: auto;
-    font-size: 35px;
+    font-size: 11vw;
     text-shadow: 1px 1px 0 black, 2px 2px 0 black;
-    line-height: 2.5rem;
+    font-stretch: expanded;
     text-transform: uppercase;    
 }
 
 .Logo p {
     text-shadow: 1px 1px 0 black, 2px 2px 0 black;
-    font-size: 1.3rem;
+    font-size: 6vw;
     font-stretch: expanded;
-    margin: 0 0 0 0rem;
+    margin: auto;
 }
 
 @media (min-width: 1024px){
-    .Logo {
-        
-    }
-
     .Logo h1 {
-        line-height: 7.5rem;
-        font-size: 7rem;
+        font-size: 5vw;
     }
 
     .Logo p {
-        font-size: 3rem;
+        font-size: 2vw;
     }
 }

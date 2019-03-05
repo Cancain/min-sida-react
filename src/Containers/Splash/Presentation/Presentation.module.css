@@ -5,15 +5,37 @@
 
 @media (min-width: 1024px){
     .Presentation {
-        display: grid;
-        grid-template-columns: 0.5fr 1.5fr 0.8fr 0.5fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        height: 100%;
-        
+        width: fit-content;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin: 25vh 0 0 10vw;
+        height: 80%; 
+        background-color: #163436;
+        box-shadow: 2px 2px 8px black;
+        padding: 0 0 30px 30px;      
     }
-    
-    .Logo {
-        grid-row: 2;
-        grid-column: 2;
+
+    .MediaIcons {
+        display: flex;
+        flex-flow: column;
+        width: fit-content;
+        margin: 4vh 0 0 2vw;
+        padding: 0 2vw 0 0;
+    }
+
+    .Presentation i {
+        font-size: 5vw;
+        text-shadow: 2px 2px 8px black;
+        color: #728687;
+        cursor: pointer;
+        margin: 0 0 0 0;
     }
 }
+
+@media (max-width: 1200px){
+    .Presentation {
+        margin: inherit auto;
+    }
+}
+
