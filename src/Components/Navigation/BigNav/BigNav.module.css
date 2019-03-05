@@ -1,0 +1,11 @@
+.BigNav {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+@media (max-width: 1050px){
+    .BigNav{
+        margin-left: 20px;
+    }
+}

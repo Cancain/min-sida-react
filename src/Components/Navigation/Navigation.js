@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import style from './Navigation.module.css'
-import NavItem from './NavItem/NavItem';
 import MobileNav from './MobileNav/MobileNav';
+import BigNav from './BigNav/BigNav';
 
 
 class Navigation extends Component {
@@ -36,9 +36,9 @@ class Navigation extends Component {
 
         //Stores what nav should render for big screens
         const bigNav = (
-            <div className={style.BigNav}>
-                <p>Big Nav</p>
-            </div>
+            <BigNav
+                items={this.state.menuItems}
+            />
         )
 
         //Stores what nav should render for small screens

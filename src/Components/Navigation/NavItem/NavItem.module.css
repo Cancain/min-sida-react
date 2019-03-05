@@ -1,5 +1,4 @@
 .NavItem {
-    margin: 0;
     width: 97%;
     height: 50px;
     background-color: #163436;
@@ -16,4 +15,21 @@
     margin-left: 10%;
     font-size: 1.2rem;
     text-transform: uppercase
+}
+
+@media (min-width: 1025px){
+    .NavItem {
+        text-align: start;
+        width: fit-content; 
+        height: fit-content; 
+        margin: 25px 15px 0 0px;  
+        cursor: pointer;
+        box-shadow: 0 0 0 0 ;
+        padding: 10px;    
+    }
+
+    .NavItem p {
+        position: relative;
+        margin: 0;
+    }
 }
