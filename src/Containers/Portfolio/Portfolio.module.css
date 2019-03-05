@@ -1,0 +1,29 @@
+.Portfolio {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.Portfolio h1 {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.5rem;
+    color: #728687;
+}
+
+.Portfolio a{
+    text-decoration: none;
+    color: #728687;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.2rem;
+}
+
+.linkWrapper {
+    margin-bottom: 10px;
+}
+
+.text {
+    margin: 1rem 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px black;
+}

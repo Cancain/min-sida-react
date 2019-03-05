@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import Splash from '../../Containers/Splash/Splash';
 import Navigation from '../../Components/Navigation/Navigation';
 import style from './Layout.module.css';
-import AboutMe from '../../Components/AboutMe/AboutMe';
-import Portfolio from '../../Components/Portfolio/Portfolio';
-import Contact from '../../Components/Contact/Contact';
+import AboutMe from '../../Containers/AboutMe/AboutMe';
+import Portfolio from '../../Containers/Portfolio/Portfolio';
+import Contact from '../../Containers/Contact/Contact';
 
 class Layout extends Component {
 

@@ -1,11 +1,11 @@
-@keyframes menuOpen1 {
-    to{transform: translate(0px, 13px) rotate(50deg) scale(0.6, 1)}    
+ @keyframes menuOpen1 {
+    to{transform: translate(0px, 13px) rotate(50deg) scale(1, 1)}    
 }
 @keyframes menuOpen2 {
     to{opacity: 0}
 }
 @keyframes menuOpen3 {
-    to{transform: translate(0px, -13px) rotate(-50deg) scale(0.6, 1)}
+    to{transform: translate(0px, -13px) rotate(-50deg) scale(1, 1)}
 }
 @keyframes menuClosed1 {
     to{transform: translate(0px, 0px) rotate(0deg) scale(1, 1)}         
@@ -21,7 +21,7 @@
     position: relative;
     font-weight: bolder;
     color: #728687;
-    left: 83vw;
+    left: 80vw;
     top: 15px;
     padding: 4px;
     padding-bottom: 0;
@@ -50,7 +50,7 @@
 
 .MenuBtn .Line2 {
     animation-name: menuOpen2;
-    animation-duration: 0.4s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards
 }
 
@@ -67,9 +67,8 @@
 }
 
 .MenuBtn .Line2Closed {
-    opacity: 1;
     animation-name: menuClosed2;
-    animation-duration: 0.4s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards
 }
 

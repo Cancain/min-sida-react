@@ -40,6 +40,7 @@ class Navigation extends Component {
         const smallNav = (
             <MobileNav
                 menuItems={this.state.menuItems}
+                sideDrawerClicked={() => this.sideDrawerHandler()}
                 menuOpened={(event) => this.sideDrawerHandler(event)}
                 menuOpen={this.state.sideDrawerOpen}
                 breakPoint={breakPoint}

@@ -9,6 +9,15 @@
 }
 
 .Handle p {
+    width: 95%;
+    color: #728687;
+    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    margin: auto;
+    margin-left: 5px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: start;
+}
+.Handle strong {
     color: #728687;
     text-shadow: 1px 1px 0 black, 2px 2px 0 black;
     margin: auto;
@@ -21,4 +30,13 @@
     position: absolute;
     text-align: end;
     right: 10px;
+}
+
+.subDrawer {
+    background-color: #253839; 
+    height: 15px;   
+}
+
+.subDrawer p {
+    font-size: 1rem;
 }

@@ -17,15 +17,13 @@ class Drawers extends Component {
 
     render() {
 
-        // const expandedDrawer =
-        //     <Drawer
-        //         text={this.props.children}
-        //     />;
+        let classList = [style.Drawers, this.props.subDrawer ? style.subDrawer : null]
 
         return (
-            <div className={style.Drawers}>
+            <div className={classList.join(' ')}>
 
                 <Handle
+                    subDrawer={this.props.subDrawer}
                     text={this.props.description}
                     clicked={this.expandHandler}
                     open={this.state.expanded}

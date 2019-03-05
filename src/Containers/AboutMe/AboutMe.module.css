@@ -28,3 +28,21 @@
     background-color: rgba(0,0,0,0.3);
     padding: 2px;
 }
+
+.AboutMe ul {
+    list-style: none;
+    text-align: start;
+    margin: 0 0 0 5%;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.AboutMe li {
+    margin: 5px 0;
+}
+
+.AboutMe a {
+    color: #728687;
+    text-decoration: none;
+}

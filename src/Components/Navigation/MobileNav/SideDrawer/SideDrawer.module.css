@@ -3,12 +3,12 @@
 }
 
 @keyframes slideOut{
-    to{left: -300px}
+    to{left: -1000px}
 }
 
 .SideDrawer {
     position: fixed;
-    left: -300px;
+    left: -1000px;
     width: 70vw;
     height: 100vh;
     z-index: 200;

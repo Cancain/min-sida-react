@@ -1,6 +1,6 @@
 import React from 'react';
 
-import profileImg from '../../assets/images/me.png'
+import profileImg from '../../assets/images/8bitAvatar.png'
 import style from './ProfileImage.module.css'
 
 const profileImage = (props) => {
