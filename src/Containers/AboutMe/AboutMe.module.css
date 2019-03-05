@@ -24,7 +24,8 @@
 .wrapper {
     box-shadow: 1px 1px 0 black, 2px 2px 0 black;
     margin: auto;
-    width: 80vw;
+    width: fit-content;
+    height: fit-content;
     background-color: rgba(0,0,0,0.3);
     padding: 2px;
 }
@@ -45,4 +46,9 @@
 .AboutMe a {
     color: #728687;
     text-decoration: none;
+}
+
+@media (min-width: 1025px){
+    .wrapper {
+    }
 }

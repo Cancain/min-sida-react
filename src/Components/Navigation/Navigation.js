@@ -38,6 +38,7 @@ class Navigation extends Component {
         const bigNav = (
             <BigNav
                 items={this.state.menuItems}
+                navItemClicked={(event) => this.NavItemClickHandler(event)}
             />
         )
 

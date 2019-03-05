@@ -8,9 +8,7 @@ import SkillProfiler from '../../Components/SkillProfiler/SkillProfiler';
 
 const aboutMe = (props) => {
 
-    const imgStyle = {
-        width: '80%'
-    }
+    let imgStyle = { width: '40%' };
 
     return (
         <div className={style.AboutMe}>

@@ -13,3 +13,10 @@
 .Drawers p {
     text-shadow: 1px 1px 0 black, 2px 2px 0 black;
 }
+
+@media (min-width: 1025px){
+    .Drawers {
+        width: 60vw;
+        margin: 0 auto 5px auto;
+    }
+}

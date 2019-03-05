@@ -10,6 +10,7 @@ const bigNav = (props) => {
             <NavItem
                 text={item.text}
                 key={item.id}
+                clicked={(event) => props.navItemClicked(event)}
             />
         )
     })
