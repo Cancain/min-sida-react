@@ -13,7 +13,7 @@ const handle = (props) => {
         >
 
             <p>{props.text}</p>
-            <p className={style.plusMinus}>{props.open ? '-' : '+'}</p>
+            <strong className={style.plusMinus}>{props.open ? '-' : '+'}</strong>
         </div>
     )
 }
