@@ -3,15 +3,20 @@ import React from 'react';
 import style from './AboutMe.module.css';
 
 import Drawers from '../../Components/Drawers/Drawers';
-import ProfileImage from '../../Components/ProfileImage/ProfileImage';
+import EightBitProfileImage from '../../Components/8BitProfileImage/8BitProfileImage';
 import SkillProfiler from '../../Components/SkillProfiler/SkillProfiler';
 
 const aboutMe = (props) => {
+
+    const imgStyle = {
+        width: '80%'
+    }
+
     return (
         <div className={style.AboutMe}>
             <div className={style.wrapper}>
                 <h1>About me</h1>
-                <ProfileImage />
+                <EightBitProfileImage style={imgStyle} />
             </div>
 
 
