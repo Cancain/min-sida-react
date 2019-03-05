@@ -22,7 +22,7 @@ class Skillmeter extends Component {
         const skillDisplay = this.skill.map((skill, i) => {
 
             let classes = [style.Bar]
-            skill ? classes.push(style.active) : classes.push(style.inactive)
+            skill ? classes.push(style.active) : classes.push(style.inactive);
 
             return <div
                 className={classes.join(' ')}

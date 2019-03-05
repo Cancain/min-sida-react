@@ -10,7 +10,7 @@ import Contact from '../../Components/Contact/Contact';
 class Layout extends Component {
 
     state = {
-        currentPage: 'about'
+        currentPage: null
     }
 
     //Responds to a click on a navitem 
