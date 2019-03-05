@@ -4,7 +4,10 @@ import style from './Backdrop.module.css';
 
 const backdrop = (props) => {
     return (
-        <div className={props.open ? style.Backdrop : style.BackdropClosed}>
+        <div
+            className={props.open ? style.Backdrop : style.BackdropClosed}
+            onClick={() => props.clicked()}
+        >
         </div>
     )
 }

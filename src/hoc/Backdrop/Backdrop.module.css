@@ -3,7 +3,7 @@
 }
 
 @keyframes fadeOut{
-    to{background-color: rgba(0, 0, 0, 0.0)}
+    to{opacity: 0;}
 }
 
 .Backdrop {
@@ -25,5 +25,5 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
     position: fixed;
-    z-index: -100;
+    pointer-events: none;
 }

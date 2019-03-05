@@ -14,6 +14,7 @@ const mobileNav = (props) => {
                 menuOpen={props.menuOpen}
             />
             <SideDrawer
+                clicked={() => props.sideDrawerClicked()}
                 menuOpen={props.menuOpen}
                 menuItems={props.menuItems}
                 navItemClicked={props.navItemClicked}

@@ -15,13 +15,15 @@ const sideDrawer = (props) => {
         />
     });
 
-
     return (
         <Fragment>
             <div className={props.menuOpen ? style.SideDrawer : style.MenuClosed}>
                 {navItemHandler}
             </div>
-            <Backdrop open={props.menuOpen} />
+            <Backdrop
+                open={props.menuOpen}
+                clicked={props.clicked}
+            />
         </Fragment >
     )
 }
