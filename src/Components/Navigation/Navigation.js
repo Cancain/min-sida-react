@@ -18,8 +18,11 @@ class Navigation extends Component {
     }
 
     NavItemClickHandler = (event) => {
-        this.props.navItemClicked(event)
-        this.sideDrawerHandler();
+        this.props.navItemClicked(event);
+
+        event !== null ?
+            this.sideDrawerHandler() :
+            this.setState({ sideDrawerOpen: false });
     }
 
     //Sets the staus of sideDrawerOpen to it's opposite
@@ -58,7 +61,11 @@ class Navigation extends Component {
 
         return (
             <div className={style.Navigation}>
-                <h2>Tomas<br></br>Eriksson</h2>
+                <h2
+                    onClick={(event) => this.NavItemClickHandler(null)}
+                    style={{ cursor: 'pointer' }}
+                >Tomas<br></br>Eriksson
+                </h2>
                 {nav}
             </div>
         )
