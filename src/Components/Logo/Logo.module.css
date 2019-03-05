@@ -22,7 +22,7 @@
     margin: auto;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1025px){
     .Logo h1 {
         font-size: 5vw;
     }

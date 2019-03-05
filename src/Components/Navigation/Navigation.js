@@ -29,7 +29,7 @@ class Navigation extends Component {
 
     render() {
         //A breakpoint for switching between mobile and desktop layout 
-        const breakPoint = 1024;
+        const breakPoint = 1025;
 
         //Stores what nav should render for big screens
         const bigNav = (

@@ -78,3 +78,9 @@
     animation-duration: 0.4s;
     animation-fill-mode: forwards
 }
+
+@media (min-width: 550px) {
+    .MenuBtn {
+        left: 90vw;
+    }
+}

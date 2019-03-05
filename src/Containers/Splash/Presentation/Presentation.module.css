@@ -3,13 +3,13 @@
     margin: 50% 0 0 0;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1025px){
     .Presentation {
         width: fit-content;
         display: flex;
         flex-flow: row;
         justify-content: center;
-        margin: 25vh 0 0 10vw;
+        margin: 20vh 0 0 11vw;
         height: 80%; 
         background-color: #163436;
         box-shadow: 2px 2px 8px black;
@@ -35,7 +35,7 @@
 
 @media (max-width: 1200px){
     .Presentation {
-        margin: inherit auto;
+        margin: 15vh auto;
     }
 }
 
