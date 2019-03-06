@@ -1,0 +1,24 @@
+@keyframes slideIn{
+    from{left: -3000px; opacity: 0;}
+    to{left: 15vw; opacity: 1;}
+}
+
+.Modal {
+    position: fixed;
+    left: 15vw;
+    top: 10vh;
+    width: 65vw;
+    height: 85%;
+    margin: 0 auto 0 auto;
+    background: rgba(22, 52, 54, 0.95);
+    padding: 10px;
+    box-shadow: 2px 2px 8px black;
+    z-index: 200;
+    overflow: auto;
+    scrollbar-width: none;
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.Modal::-webkit-scrollbar { width: 0 !important }

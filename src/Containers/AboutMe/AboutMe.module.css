@@ -26,7 +26,7 @@
     margin: auto;
     width: fit-content;
     height: fit-content;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.4);
     padding: 2px;
 }
 
@@ -48,3 +48,8 @@
     text-decoration: none;
 }
 
+@media (min-width: 1025px){
+    .wrapper {
+        margin-bottom: 10px;
+    }
+}

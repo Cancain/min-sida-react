@@ -3,8 +3,9 @@
     height: 30px;
     background-color: #253839;
     display: flex;
+    margin: 0 0 4px 0;
     align-content: center;
-    box-shadow: 1px 1px 0 rgba(0,0,0,0.4), 2px 2px 0 rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 1px 1px black;
     padding: 8px 0 5px 0;
 }
 
@@ -32,11 +33,26 @@
     right: 10px;
 }
 
-.subDrawer {
+ .subDrawer {
     background-color: #253839; 
     height: 15px;   
+    margin: 0;
+}
+.Handle .subDrawer {
+    margin-bottom: 0;
 }
 
 .subDrawer p {
     font-size: 1rem;
+}
+
+@media (min-width: 1025px){
+    .plusMinus {
+        right: 6%
+    }
+
+    .Handle {
+        box-shadow: 0 0 0 0;
+        margin-bottom: 0;
+    }
 }
