@@ -1,0 +1,14 @@
+.Modal {
+    position: fixed;
+    left: 15vw;
+    top: 10vh;
+    width: 65vw;
+    height: 85%;
+    margin: 0 auto 0 auto;
+    background: rgba(22, 52, 54, 0.95);
+    padding: 10px;
+    box-shadow: 2px 2px 8px black;
+    z-index: 200;
+    overflow: auto;
+    scrollbar-width: none;
+}

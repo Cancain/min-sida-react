@@ -31,8 +31,7 @@ class Navigation extends Component {
     }
 
     render() {
-        //A breakpoint for switching between mobile and desktop layout 
-        const breakPoint = 1025;
+
 
         //Stores what nav should render for big screens
         const bigNav = (
@@ -49,14 +48,14 @@ class Navigation extends Component {
                 sideDrawerClicked={() => this.sideDrawerHandler()}
                 menuOpened={(event) => this.sideDrawerHandler(event)}
                 menuOpen={this.state.sideDrawerOpen}
-                breakPoint={breakPoint}
+                breakPoint={this.props.breakPoint}
                 navItemClicked={(event) => this.NavItemClickHandler(event)}
             />
         )
 
         //Outputs different navs depending on the windows width
         let nav;
-        window.innerWidth >= breakPoint ?
+        window.innerWidth >= this.props.breakPoint ?
             nav = bigNav :
             nav = smallNav;
 

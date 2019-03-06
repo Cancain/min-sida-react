@@ -6,6 +6,7 @@ import style from './Layout.module.css';
 import AboutMe from '../../Containers/AboutMe/AboutMe';
 import Portfolio from '../../Containers/Portfolio/Portfolio';
 import Contact from '../../Containers/Contact/Contact';
+import Modal from '../Modal/Modal';
 
 class Layout extends Component {
 
@@ -20,32 +21,64 @@ class Layout extends Component {
         this.setState({ currentPage: page })
     }
 
+
+
     render() {
+
+        //A breakpoint for switching between mobile and desktop layout 
+        const breakPoint = 1025;
+
         let page = null;
 
         //Constants holding the different pages
-        const home = <Splash />
-        const aboutMe = <AboutMe />
-        const portfolio = <Portfolio />
-        const contact = <Contact />
+        //Big screens
+        const aboutMeLg = <Modal content={<AboutMe />} />;
+        const portfolioLg = <Modal content={<Portfolio />} />;
+        const contactLg = <Modal content={<Contact />} />;
 
-        //Renders the proper "page" depending on the cirrentPage state
+        //Small screens
+        const homeSm = <Splash />
+        const aboutMeSm = <AboutMe />;
+        const portfolioSm = <Portfolio />;
+        const contactSm = <Contact />;
+
+        //Renders the proper "page" depending on the cirrentPage state and window width
         //If any unexpected value shows up in currentPage the "home" page will render 
         switch (this.state.currentPage) {
             case 'home':
-                page = home;
+                if (window.innerWidth < breakPoint) {
+                    page = homeSm;
+                } else {
+                    page = null;
+                }
                 break;
             case 'about':
-                page = aboutMe;
+                if (window.innerWidth < breakPoint) {
+                    page = aboutMeSm;
+                } else {
+                    page = aboutMeLg;
+                }
                 break;
             case 'portfolio':
-                page = portfolio;
+                if (window.innerWidth < breakPoint) {
+                    page = portfolioSm;
+                } else {
+                    page = portfolioLg;
+                }
                 break;
             case 'contact':
-                page = contact;
+                if (window.innerWidth < breakPoint) {
+                    page = contactSm;
+                } else {
+                    page = contactLg;
+                }
                 break;
             default:
-                page = home;
+                if (window.innerWidth < breakPoint) {
+                    page = homeSm;
+                } else {
+                    page = null;
+                }
                 break;
         }
 
@@ -53,9 +86,12 @@ class Layout extends Component {
         return (
             <div className={style.Layout} >
                 <Navigation
+                    breakPoint={breakPoint}
                     navItemClicked={(event) => this.pageHandler(event)}
                 />
+                {window.innerWidth > breakPoint ? <Splash /> : null}
                 {page}
+
             </div>
         )
     }

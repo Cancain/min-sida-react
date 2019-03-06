@@ -40,3 +40,9 @@
 .subDrawer p {
     font-size: 1rem;
 }
+
+@media (min-width: 1025px){
+    .plusMinus {
+        right: 6%
+    }
+}
