@@ -33,3 +33,9 @@
 .Drawer p {
     margin: 0 1rem 1rem 1rem;
 }
+
+@media (min-width: 1025px){
+    .Drawer ul {
+        margin-left: 1vw;
+    }
+}

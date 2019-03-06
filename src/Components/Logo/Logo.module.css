@@ -3,26 +3,30 @@
 .Logo{  
     text-align: start;
     font-family: 'Press Start 2P', cursive;
-    margin: 3rem 0 0 1rem;
+    margin: 22vh 0 0 1rem;
     color: #728687; 
 }
 
 .Logo h1 {
     margin: auto;
     font-size: 11vw;
-    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    text-shadow: 2px 2px 8px black;
     font-stretch: expanded;
     text-transform: uppercase;    
 }
 
 .Logo p {
-    text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    text-shadow: 2px 2px 8px black;;
     font-size: 6vw;
     font-stretch: expanded;
     margin: auto;
 }
 
 @media (min-width: 1025px){
+    .Logo{
+        margin: 5vh 2vw 0 0;
+    }
+
     .Logo h1 {
         font-size: 5vw;
     }

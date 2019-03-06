@@ -1,6 +1,31 @@
+@keyframes focus{
+    to{color: rgba(255, 255, 255, 0.8)}
+}
+
 .Presentation {
     width: 100vw;
     margin: 50% 0 0 0;
+}
+
+.Presentation i {
+    font-size: 18vw;
+    color: #728687;
+    margin: 0 5vw;
+    
+}   
+
+.MediaIcons {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: fit-content;
+    margin: 1.5vh 0;
+    padding: 5px 0;
+    width: 100vw;
+    box-shadow: 2px 2px 8px black;
 }
 
 @media (min-width: 1025px){
@@ -13,29 +38,40 @@
         height: 80%; 
         background-color: #163436;
         box-shadow: 2px 2px 8px black;
-        padding: 0 0 30px 30px;      
+        padding: 15px 30px 30px 30px;      
     }
 
     .MediaIcons {
+        position: relative;
         display: flex;
         flex-flow: column;
         width: fit-content;
-        margin: 4vh 0 0 2vw;
-        padding: 0 2vw 0 0;
+        margin: 2vh 0 0 2vw;
+        padding: 5px;
+        border-radius: 7px;
     }
 
-    .Presentation i {
-        font-size: 5vw;
+    .Presentation i {        
         text-shadow: 2px 2px 8px black;
-        color: #728687;
+        font-size: 5vw;
         cursor: pointer;
-        margin: 0 0 0 0;
+        margin: 5px;
+        padding: 0;
+    }
+
+    .Presentation i:hover{
+        animation-name: focus;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
     }
 }
+
 
 @media (max-width: 1200px){
     .Presentation {
         margin: 15vh auto;
     }
+    
+
 }
 
