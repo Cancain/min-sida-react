@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 import style from './Portfolio.module.css';
 import Drawers from '../../Components/Drawers/Drawers';
+
 
 class Portfolio extends Component {
 
@@ -20,8 +22,12 @@ class Portfolio extends Component {
             }
         ]
     }
-
     render() {
+        axios.get('Portfolios/getAllPortfolios/-1')
+            .then(response => {
+                console.log(response);
+            })
+
         //Renders all the added posts from the state inside a Drawer
         const portfolioHandler = this.state.portfolio.map(post => {
             return <Drawers
