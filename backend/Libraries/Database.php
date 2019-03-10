@@ -66,7 +66,7 @@ class Database{
     }
 
     //Get result set as an array of objects
-    public function resultSet(){
+    public function fetchMultiple(){
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }

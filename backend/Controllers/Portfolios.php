@@ -7,8 +7,8 @@ class Portfolios extends Controller{
     }
 
     public function getAllPortfolios(){
-        $data = $this->portfolioModel->hello();
-        echo $data;
+        $data = $this->portfolioModel->getAllPortfolio();
+        echo utf8_decode($data);
     }
 }
 
