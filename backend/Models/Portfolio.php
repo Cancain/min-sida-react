@@ -14,7 +14,17 @@ class Portfolio extends Database{
     public function getAllPortfolio(){
         $this->db->query('SELECT * FROM portfolio');
 
-        $data = $this->db->fetchMultiple();
+        $data = [
+            'portfolio' => $this->db->fetchMultiple(),
+            'links' => ''            
+        ];
+
+        $this->db->query('SELECT * FROM links');
+
+        $data = [
+            'portfolio' => $data['portfolio'],
+            'links' => $this->db->fetchMultiple()            
+        ];
         $data = json_encode($data);
         return $data;
     }

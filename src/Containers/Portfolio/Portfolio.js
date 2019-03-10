@@ -8,17 +8,20 @@ import Drawers from '../../Components/Drawers/Drawers';
 class Portfolio extends Component {
 
     state = {
-        portfolio: null
+        portfolio: null,
+        links: null
     }
-
-
 
     componentDidMount() {
         //Gets all the portfolio-posts from a database and adds to state
         axios.get('Portfolios/getAllPortfolios/-1')
             .then(response => {
-                const portfolio = response.data;
-                this.setState({ portfolio: portfolio })
+                const portfolio = response.data.portfolio;
+                const links = response.data.links;
+                this.setState({
+                    portfolio: portfolio,
+                    links: links
+                })
             })
     }
 
@@ -27,21 +30,26 @@ class Portfolio extends Component {
         let portfolioHandler;
         if (this.state.portfolio != null) {
             portfolioHandler = this.state.portfolio.map(post => {
-                console.log(post.title);
                 return (
                     <Drawers
                         key={post.id}
                         description={post.title}
                     >
-                        {post.body}
+                        <small>{post.createdAt}
+                        </small>
+                        <br></br>
+                        <p>{post.body}</p>
+                        {/* this map checks the links portfoloioId
+                        if it matches it renders the links with url and text */}
+                        {this.state.links.map(link => {
+                            return link.portfolioId === post.id ?
+                                <div key={link.id}><a href={link.url}>{link.text}</a><br></br></div> :
+                                null;
+                        })}
                     </Drawers>
                 )
             })
-
         }
-
-
-
 
         return (
             <div className={style.Portfolio} >
