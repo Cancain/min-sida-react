@@ -7,6 +7,7 @@ import AboutMe from '../../Containers/AboutMe/AboutMe';
 import Portfolio from '../../Containers/Portfolio/Portfolio';
 import Contact from '../../Containers/Contact/Contact';
 import Modal from '../Modal/Modal';
+import LogIn from '../../Containers/LogIn/LogIn';
 
 class Layout extends Component {
     state = {
@@ -80,7 +81,7 @@ class Layout extends Component {
             closeBtnClicked={() => this.pageHandler(null)}
             leftArrowClicked={() => this.arrowClickHandler('left')}
             rightArrowClicked={() => this.arrowClickHandler('right')}
-            content={<Contact />}
+            content={<LogIn />}
         />;
 
         //Small screens
