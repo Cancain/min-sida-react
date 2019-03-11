@@ -7,7 +7,7 @@ const presentation = (props) => {
     return (
         <div className={style.Presentation}>
             <div className={style.Logo}>
-                <Logo />
+                <Logo logoClick={props.logoClick} />
             </div>
             <div className={style.MediaIcons}>
                 <a href="https://github.com/Cancain" target="_blank" rel="noopener noreferrer"><i className="fab fa-github-square"></i></a>

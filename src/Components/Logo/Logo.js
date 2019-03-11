@@ -4,7 +4,10 @@ import style from './Logo.module.css';
 
 const logo = (props) => {
     return (
-        <div className={style.Logo}>
+        <div
+            onClick={props.logoClick}
+            className={style.Logo}
+        >
             <h1>Tomas</h1>
             <h1>Eriksson</h1>
             <p>Web developer &</p>

@@ -9,9 +9,15 @@ import Contact from '../../Containers/Contact/Contact';
 import Modal from '../Modal/Modal';
 
 class Layout extends Component {
-
     state = {
         currentPage: null
+    }
+
+    logoClickHandler = (event) => {
+        if (event.ctrlKey) {
+            this.pageHandler('logIn');
+        }
+
     }
 
     //Responds to a click on a navitem 
@@ -21,6 +27,8 @@ class Layout extends Component {
         this.setState({ currentPage: page })
     }
 
+    //This function changes the current page when you click on a arrow button in the modal
+    //it first checks the current page it's at then switches the page depending on what arrow got clicked
     arrowClickHandler = (dir) => {
         const page = this.state.currentPage;
 
@@ -68,6 +76,12 @@ class Layout extends Component {
             rightArrowClicked={() => this.arrowClickHandler('right')}
             content={<Contact />}
         />;
+        const logInLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={<Contact />}
+        />;
 
         //Small screens
         const homeSm = <Splash />
@@ -106,6 +120,13 @@ class Layout extends Component {
                     page = contactLg;
                 }
                 break;
+            case 'logIn':
+                if (window.innerWidth < breakPoint) {
+                    page = logInLg;
+                } else {
+                    page = logInLg;
+                }
+                break;
             default:
                 if (window.innerWidth < breakPoint) {
                     page = homeSm;
@@ -122,7 +143,7 @@ class Layout extends Component {
                     breakPoint={breakPoint}
                     navItemClicked={(event) => this.pageHandler(event)}
                 />
-                {window.innerWidth > breakPoint ? <Splash /> : null}
+                {window.innerWidth > breakPoint ? <Splash logoClick={(event) => this.logoClickHandler(event)} /> : null}
                 {page}
 
             </div>
