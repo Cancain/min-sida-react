@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import axios from 'axios';
 
 import style from './Portfolio.module.css';
@@ -31,31 +31,37 @@ class Portfolio extends Component {
         if (this.state.portfolio != null) {
             portfolioHandler = this.state.portfolio.map(post => {
                 return (
-                    <Drawers
-                        key={post.id}
-                        description={post.title}
-                    >
-                        <small>{post.createdAt}
-                        </small>
-                        <br></br>
-                        <p>{post.body}</p>
-                        {/* this map checks the links portfoloioId
+                    <Fragment>
+                        < Drawers
+                            key={post.id}
+                            description={post.title}
+                        >
+                            <small>{post.createdAt}
+                            </small>
+                            <br></br>
+                            <p>{post.body}</p>
+                            {/* this map checks the links portfoloioId
                         if it matches it renders the links with url and text */}
-                        {this.state.links.map(link => {
-                            return link.portfolioId === post.id ?
-                                <div key={link.id}><a href={link.url}>{link.text}</a><br></br></div> :
-                                null;
-                        })}
-                    </Drawers>
+                            {
+                                this.state.links.map(link => {
+                                    return link.portfolioId === post.id ?
+                                        <div key={link.id}><a href={link.url}>{link.text}</a><br></br></div> :
+                                        null;
+                                })
+                            }
+                        </Drawers >
+                    </Fragment>
                 )
             })
         }
 
         return (
             <div className={style.Portfolio} >
+                {this.props.currentUser ? <button>Add portfolio</button> : null}
                 <div>
                     <h1>Portfolio</h1>
                 </div>
+
 
                 {portfolioHandler}
             </div >

@@ -24,7 +24,19 @@ class User extends Database {
         
     }
 
-    public function test($data){
-        echo var_dump($data);
+    public function idAdminById($id){
+        $this->db->query('SELECT *
+                            FROM users
+                            WHERE id = :id');
+        $this->db->bind('id', $id);
+
+        $data = $this->db->fetchSingle();
+        if ($data->isAdmin) {
+            return true;
+        } else {
+            return false;
+        }
+
+        
     }
 }

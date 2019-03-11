@@ -39,7 +39,6 @@ class LogIn extends Component {
                 .then(response => {
                     this.setState({ errMsg: response.data['errMsg'] })
                     if (response.data['loginSuccess'] === true) {
-                        console.log('sucess');
                         this.userHandler(response.data['foundUser']);
                     }
                 });

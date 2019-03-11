@@ -11,15 +11,13 @@ import LogIn from '../../Containers/LogIn/LogIn';
 
 class Layout extends Component {
     state = {
-        currentPage: null,
-        currentUser: null
+        currentPage: null
     }
 
     logoClickHandler = (event) => {
         if (event.ctrlKey) {
             this.pageHandler('logIn');
         }
-
     }
 
     //Responds to a click on a navitem 
@@ -52,10 +50,7 @@ class Layout extends Component {
         }
     }
 
-    startUserSession = (user) => {
-        this.setState({ currentUser: user });
-        console.log(this.state.currentUser);
-    }
+
 
     render() {
 
@@ -75,7 +70,10 @@ class Layout extends Component {
             closeBtnClicked={() => this.pageHandler(null)}
             leftArrowClicked={() => this.arrowClickHandler('left')}
             rightArrowClicked={() => this.arrowClickHandler('right')}
-            content={<Portfolio />}
+            content={
+                <Portfolio
+                    currentUser={this.props.currentUser}
+                />}
         />;
         const contactLg = <Modal
             closeBtnClicked={() => this.pageHandler(null)}
@@ -89,7 +87,7 @@ class Layout extends Component {
             rightArrowClicked={() => this.arrowClickHandler('right')}
             content={
                 <LogIn
-                    logInUser={(event) => this.startUserSession(event)}
+                    logInUser={this.props.logInUser}
                 />}
         />;
 
@@ -155,6 +153,7 @@ class Layout extends Component {
                 />
                 {window.innerWidth > breakPoint ? <Splash logoClick={(event) => this.logoClickHandler(event)} /> : null}
                 {page}
+                <button onClick={() => console.log(this.props.currentUser)}>Who is logged in?</button>
 
             </div>
         )
