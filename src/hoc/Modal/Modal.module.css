@@ -19,6 +19,18 @@
     animation-name: slideIn;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.CloseBtn {
+    position: absolute;
+    z-index: 300;
+    right: 2%;
+    top: 1%;
+    color: #728687;
+    text-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    transform: rotate(90deg);
 }
 
 .Modal::-webkit-scrollbar { width: 0 !important }

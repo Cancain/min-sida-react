@@ -4,10 +4,10 @@ import style from './Modal.module.css';
 
 const modal = (props) => {
 
-    console.log(props.content)
-
     return (
         <div className={style.Modal}>
+            <div className={style.CloseBtn}><h2>X</h2></div>
+
             {props.content}
         </div>
     )
