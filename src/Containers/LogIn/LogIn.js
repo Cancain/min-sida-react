@@ -22,6 +22,10 @@ class LogIn extends Component {
         }
     }
 
+    userHandler = (user) => {
+        this.props.logInUser(user);
+    }
+
     submitHandler = () => {
 
         if (this.validateFields()) {
@@ -36,6 +40,7 @@ class LogIn extends Component {
                     this.setState({ errMsg: response.data['errMsg'] })
                     if (response.data['loginSuccess'] === true) {
                         console.log('sucess');
+                        this.userHandler(response.data['foundUser']);
                     }
                 });
         }

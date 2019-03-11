@@ -11,7 +11,8 @@ import LogIn from '../../Containers/LogIn/LogIn';
 
 class Layout extends Component {
     state = {
-        currentPage: null
+        currentPage: null,
+        currentUser: null
     }
 
     logoClickHandler = (event) => {
@@ -51,6 +52,11 @@ class Layout extends Component {
         }
     }
 
+    startUserSession = (user) => {
+        this.setState({ currentUser: user });
+        console.log(this.state.currentUser);
+    }
+
     render() {
 
         //A breakpoint for switching between mobile and desktop layout 
@@ -81,7 +87,10 @@ class Layout extends Component {
             closeBtnClicked={() => this.pageHandler(null)}
             leftArrowClicked={() => this.arrowClickHandler('left')}
             rightArrowClicked={() => this.arrowClickHandler('right')}
-            content={<LogIn />}
+            content={
+                <LogIn
+                    logInUser={(event) => this.startUserSession(event)}
+                />}
         />;
 
         //Small screens
