@@ -72,7 +72,7 @@ class Database{
     }
 
     //Get single record as object
-    public function single(){
+    public function fetchSingle(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }

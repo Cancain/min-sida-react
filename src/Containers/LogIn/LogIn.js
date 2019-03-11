@@ -6,23 +6,47 @@ import style from './LogIn.module.css'
 class LogIn extends Component {
     state = {
         email: null,
-        password: null
+        password: null,
+        errMsg: ''
+    }
+
+    validateFields = () => {
+        if (this.state.email === null) {
+            this.setState({ errMsg: 'Email cannot be empty' });
+            return false;
+        } else if (this.state.password === null) {
+            this.setState({ errMsg: 'Password cannot be empty' });
+            return false
+        } else {
+            return true;
+        }
     }
 
     submitHandler = () => {
-        const data = {
-            email: this.state.email,
-            password: this.state.password
-        };
 
-        const json = JSON.stringify(data);
-        axios.post('Users/logIn/-1', json)
-            .then(response => {
-                console.log(response);
-            })
+        if (this.validateFields()) {
+            const data = {
+                email: this.state.email,
+                password: this.state.password
+            };
+
+            axios.post(
+                'Users/logIn/-1', data)
+                .then(response => {
+                    this.setState({ errMsg: response.data['errMsg'] })
+                    if (response.data['loginSuccess'] === true) {
+                        console.log('sucess');
+                    }
+                });
+        }
+
     }
 
     render() {
+        const errorMessageHandler = this.state.errMsg !== null ?
+            <span>{this.state.errMsg}</span> :
+            null;
+
         return (
             <div className={style.LogIn}>
                 <h1>Log in to access the admin panel</h1>
@@ -50,6 +74,7 @@ class LogIn extends Component {
                     >
                     </input>
                 </div>
+                {errorMessageHandler}
             </div>
         )
     }

@@ -5,6 +5,11 @@ import Layout from '../hoc/Layout/Layout';
 
 
 class App extends Component {
+
+  state = {
+    loggedIn: null
+  }
+
   render() {
     return (
       <Fragment>
