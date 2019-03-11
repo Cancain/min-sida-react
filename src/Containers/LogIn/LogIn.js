@@ -1,18 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
 import style from './LogIn.module.css'
 
-const logIn = (props) => {
-    return (
-        <div className={style.LogIn}>
-            <h1>Log in to access the admin panel</h1>
-            <form action="" method="post">
-                <input type="email" name="email" placeholder="Email adress"></input>
-                <input type="password" name="password" placeholder="Password"></input>
-                <input type="submit" value="Log in"></input>
-            </form>
-        </div>
-    )
+class LogIn extends Component {
+    state = {
+        email: null,
+        password: null
+    }
+
+    submitHandler = () => {
+        const data = {
+            email: this.state.email,
+            password: this.state.password
+        };
+
+        const json = JSON.stringify(data);
+        axios.post('Users/logIn/-1', json)
+            .then(response => {
+                console.log(response);
+            })
+    }
+
+    render() {
+        return (
+            <div className={style.LogIn}>
+                <h1>Log in to access the admin panel</h1>
+                <div>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email adress"
+                        onChange={(event) => this.setState({ email: event.target.value })}
+                    >
+                    </input>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        onChange={(event) => this.setState({ password: event.target.value })}
+                    >
+                    </input>
+
+                    <input
+                        type="submit"
+                        value="Log in"
+                        onClick={this.submitHandler}
+                    >
+                    </input>
+                </div>
+            </div>
+        )
+    }
 }
 
-export default logIn;
+export default LogIn;

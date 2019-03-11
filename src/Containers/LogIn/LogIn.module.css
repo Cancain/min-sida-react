@@ -10,7 +10,7 @@
         color: #728687;
     }
 
-    .LogIn form {
+    .LogIn div {
         margin: auto;
         display: flex;
         flex-flow: column;
