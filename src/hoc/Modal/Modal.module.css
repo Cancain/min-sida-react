@@ -19,10 +19,11 @@
     animation-name: slideIn;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
-    font-family: 'Press Start 2P', cursive;
+    
 }
 
 .CloseBtn {
+    font-family: 'Press Start 2P', cursive;
     position: absolute;
     z-index: 300;
     right: 2%;
@@ -31,6 +32,27 @@
     text-shadow: 2px 2px 8px black;
     cursor: pointer;
     transform: rotate(90deg);
+    font-size: 1.5rem;
+}
+
+.RightArrow, 
+.LeftArrow {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    z-index: 300;   
+    top: 40%;
+    color: #728687;
+    text-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.RightArrow {
+    right: 0%;
+}
+
+.LeftArrow {
+    left: 0%;
 }
 
 .Modal::-webkit-scrollbar { width: 0 !important }

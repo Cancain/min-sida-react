@@ -21,7 +21,26 @@ class Layout extends Component {
         this.setState({ currentPage: page })
     }
 
+    arrowClickHandler = (dir) => {
+        const page = this.state.currentPage;
 
+        switch (page) {
+            case null:
+                this.pageHandler('null');
+                break;
+            case 'about':
+                dir === 'left' ? this.pageHandler('about') : this.pageHandler('portfolio')
+                break;
+            case 'portfolio':
+                dir === 'left' ? this.pageHandler('about') : this.pageHandler('contact')
+                break;
+            case 'contact':
+                dir === 'left' ? this.pageHandler('portfolio') : this.pageHandler('contact')
+                break;
+            default:
+                break;
+        }
+    }
 
     render() {
 
@@ -32,9 +51,23 @@ class Layout extends Component {
 
         //Constants holding the different pages
         //Big screens
-        const aboutMeLg = <Modal content={<AboutMe />} />;
-        const portfolioLg = <Modal content={<Portfolio />} />;
-        const contactLg = <Modal content={<Contact />} />;
+        const aboutMeLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={<AboutMe />} />;
+        const portfolioLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={<Portfolio />}
+        />;
+        const contactLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={<Contact />}
+        />;
 
         //Small screens
         const homeSm = <Splash />
