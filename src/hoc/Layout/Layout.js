@@ -50,8 +50,6 @@ class Layout extends Component {
         }
     }
 
-
-
     render() {
 
         //A breakpoint for switching between mobile and desktop layout 
@@ -72,7 +70,9 @@ class Layout extends Component {
             rightArrowClicked={() => this.arrowClickHandler('right')}
             content={
                 <Portfolio
+                    addPortfolioClicked={() => console.log('object')}
                     currentUser={this.props.currentUser}
+                    isAdmin={this.props.isAdmin}
                 />}
         />;
         const contactLg = <Modal
@@ -158,7 +158,6 @@ class Layout extends Component {
                 {window.innerWidth > breakPoint ? <Splash logoClick={(event) => this.logoClickHandler(event)} /> : null}
 
                 {page}
-                <button onClick={() => console.log(this.props.currentUser)}>Who is logged in?</button>
 
             </div>
         )

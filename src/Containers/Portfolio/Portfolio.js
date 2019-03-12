@@ -26,6 +26,7 @@ class Portfolio extends Component {
     }
 
     render() {
+        console.log('is admin: ' + this.props.isAdmin);
         // Renders all the added posts from the state inside a Drawer
         let portfolioHandler;
         if (this.state.portfolio != null) {
@@ -54,7 +55,7 @@ class Portfolio extends Component {
 
         return (
             <div className={style.Portfolio} >
-                {this.props.isAdmin ? <button>Add portfolio</button> : null}
+                {this.props.isAdmin ? <button onClick={this.props.addPortfolioClicked}>Add portfolio</button> : null}
                 <div>
                     <h1>Portfolio</h1>
                 </div>
