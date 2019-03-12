@@ -7,12 +7,12 @@ const presentation = (props) => {
     return (
         <div className={style.Presentation}>
             <div className={style.Logo}>
-                <Logo />
+                <Logo logoClick={props.logoClick} />
             </div>
             <div className={style.MediaIcons}>
-                <i className="fab fa-github-square"></i>
-                <i className="fab fa-twitter-square"></i>
-                <i className="fab fa-linkedin"></i>
+                <a href="https://github.com/Cancain" target="_blank" rel="noopener noreferrer"><i className="fab fa-github-square"></i></a>
+                <a href="https://twitter.com/TomasEr32931498" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square"></i></a>
+                <a href="https://www.linkedin.com/in/tomas-eriksson-712526177/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
             </div>
         </div>
     )

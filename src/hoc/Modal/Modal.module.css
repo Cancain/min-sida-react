@@ -1,3 +1,8 @@
+@keyframes slideIn{
+    from{left: -3000px; opacity: 0;}
+    to{left: 15vw; opacity: 1;}
+}
+
 .Modal {
     position: fixed;
     left: 15vw;
@@ -11,4 +16,43 @@
     z-index: 200;
     overflow: auto;
     scrollbar-width: none;
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    
 }
+
+.CloseBtn {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    z-index: 300;
+    right: 2%;
+    top: 1%;
+    color: #728687;
+    text-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+}
+
+.RightArrow, 
+.LeftArrow {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    z-index: 300;   
+    top: 40%;
+    color: #728687;
+    text-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.RightArrow {
+    right: 0%;
+}
+
+.LeftArrow {
+    left: 0%;
+}
+
+.Modal::-webkit-scrollbar { width: 0 !important }

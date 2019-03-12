@@ -6,7 +6,7 @@ import Presentation from './Presentation/Presentation';
 const splash = (props) => {
     return (
         <Fragment>
-            <Presentation />
+            <Presentation logoClick={props.logoClick} />
         </Fragment>
     )
 }

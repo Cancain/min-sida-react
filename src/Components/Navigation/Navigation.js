@@ -6,7 +6,6 @@ import BigNav from './BigNav/BigNav';
 
 
 class Navigation extends Component {
-
     state = {
         sideDrawerOpen: false,
         menuItems: [
@@ -31,8 +30,6 @@ class Navigation extends Component {
     }
 
     render() {
-
-
         //Stores what nav should render for big screens
         const bigNav = (
             <BigNav

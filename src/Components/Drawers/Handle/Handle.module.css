@@ -3,9 +3,11 @@
     height: 30px;
     background-color: #253839;
     display: flex;
+    margin: 0 0 4px 0;
     align-content: center;
-    box-shadow: 1px 1px 0 rgba(0,0,0,0.4), 2px 2px 0 rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 1px 1px black;
     padding: 8px 0 5px 0;
+    cursor: pointer;
 }
 
 .Handle p {
@@ -16,6 +18,7 @@
     margin-left: 5px;
     font-family: 'Press Start 2P', cursive;
     text-align: start;
+    
 }
 .Handle strong {
     color: #728687;
@@ -32,9 +35,18 @@
     right: 10px;
 }
 
-.subDrawer {
+ .subDrawer {
     background-color: #253839; 
+<<<<<<< HEAD
     height: 15px;  
+=======
+    height: 15px;   
+    margin: 0;
+    cursor: pointer;
+}
+.Handle .subDrawer {
+    margin-bottom: 0;
+>>>>>>> 4b45de9b96cefe7007294e5173380a0d4d8a63c2
 }
 
 .subDrawer p {
@@ -47,6 +59,12 @@
     }
 
     .Handle {
+<<<<<<< HEAD
         
+=======
+        box-shadow: 0 0 0 0;
+        margin-bottom: 0;
+        border-bottom: 1px solid black;
+>>>>>>> 4b45de9b96cefe7007294e5173380a0d4d8a63c2
     }
 }

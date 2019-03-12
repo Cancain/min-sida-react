@@ -7,11 +7,17 @@ import AboutMe from '../../Containers/AboutMe/AboutMe';
 import Portfolio from '../../Containers/Portfolio/Portfolio';
 import Contact from '../../Containers/Contact/Contact';
 import Modal from '../Modal/Modal';
+import LogIn from '../../Containers/LogIn/LogIn';
 
 class Layout extends Component {
-
     state = {
         currentPage: null
+    }
+
+    logoClickHandler = (event) => {
+        if (event.ctrlKey) {
+            this.pageHandler('logIn');
+        }
     }
 
     //Responds to a click on a navitem 
@@ -19,6 +25,29 @@ class Layout extends Component {
     pageHandler = (event) => {
         const page = event;
         this.setState({ currentPage: page })
+    }
+
+    //This function changes the current page when you click on a arrow button in the modal
+    //it first checks the current page it's at then switches the page depending on what arrow got clicked
+    arrowClickHandler = (dir) => {
+        const page = this.state.currentPage;
+
+        switch (page) {
+            case null:
+                this.pageHandler('null');
+                break;
+            case 'about':
+                dir === 'left' ? this.pageHandler('about') : this.pageHandler('portfolio')
+                break;
+            case 'portfolio':
+                dir === 'left' ? this.pageHandler('about') : this.pageHandler('contact')
+                break;
+            case 'contact':
+                dir === 'left' ? this.pageHandler('portfolio') : this.pageHandler('contact')
+                break;
+            default:
+                break;
+        }
     }
 
 
@@ -32,9 +61,35 @@ class Layout extends Component {
 
         //Constants holding the different pages
         //Big screens
-        const aboutMeLg = <Modal content={<AboutMe />} />;
-        const portfolioLg = <Modal content={<Portfolio />} />;
-        const contactLg = <Modal content={<Contact />} />;
+        const aboutMeLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={<AboutMe />} />;
+        const portfolioLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={
+                <Portfolio
+                    currentUser={this.props.currentUser}
+                />}
+        />;
+        const contactLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={<Contact />}
+        />;
+        const logInLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
+            leftArrowClicked={() => this.arrowClickHandler('left')}
+            rightArrowClicked={() => this.arrowClickHandler('right')}
+            content={
+                <LogIn
+                    logInUser={this.props.logInUser}
+                />}
+        />;
 
         //Small screens
         const homeSm = <Splash />
@@ -73,6 +128,13 @@ class Layout extends Component {
                     page = contactLg;
                 }
                 break;
+            case 'logIn':
+                if (window.innerWidth < breakPoint) {
+                    page = logInLg;
+                } else {
+                    page = logInLg;
+                }
+                break;
             default:
                 if (window.innerWidth < breakPoint) {
                     page = homeSm;
@@ -89,8 +151,9 @@ class Layout extends Component {
                     breakPoint={breakPoint}
                     navItemClicked={(event) => this.pageHandler(event)}
                 />
-                {window.innerWidth > breakPoint ? <Splash /> : null}
+                {window.innerWidth > breakPoint ? <Splash logoClick={(event) => this.logoClickHandler(event)} /> : null}
                 {page}
+                <button onClick={() => console.log(this.props.currentUser)}>Who is logged in?</button>
 
             </div>
         )
