@@ -1,0 +1,7 @@
+.AddPortfolio {
+    margin: auto auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 60%;
+}

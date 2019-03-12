@@ -12,7 +12,7 @@ import AddPortfolio from '../../Components/AddPortfolio/AddPortfolio';
 
 class Layout extends Component {
     state = {
-        currentPage: 'addPortfolio'
+        currentPage: null
     }
 
     logoClickHandler = (event) => {
