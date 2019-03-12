@@ -28,4 +28,19 @@ class Portfolio extends Database{
         $data = json_encode($data);
         return $data;
     }
+
+    public function addPortfolio($data){
+        $this->db->query('INSERT INTO portfolio(title, body)
+                            VALUES (:title, :body)');
+        $this->db->bind('title', $data['title']);
+        $this->db->bind('body', $data['body']);
+
+        $this->db->execute();
+
+
+        echo $data['body'];
+        echo $data['title'];
+        echo var_dump($data['links']);
+
+    }
 }

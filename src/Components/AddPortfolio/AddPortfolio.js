@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 import style from './AddPortfolio.module.css';
 
@@ -51,7 +52,11 @@ class AddPortfolio extends Component {
     submitHandler = () => {
         if (this.verifyData()) {
             const data = this.state;
-            console.log(data);
+            const json = JSON.stringify(data);
+            axios.post('Portfolios/addPortfolio/-1', json)
+                .then(response => {
+                    console.log(response.data);
+                });
         }
     }
 

@@ -10,5 +10,11 @@ class Portfolios extends Controller{
         $data = $this->portfolioModel->getAllPortfolio();
         echo utf8_decode($data);
     }
+
+    public function addPortfolio(){
+        $data = json_decode(file_get_contents('php://input'), true);
+
+        $this->portfolioModel->addPortfolio($data);        
+    }
 }
 
