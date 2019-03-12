@@ -8,10 +8,11 @@ import Portfolio from '../../Containers/Portfolio/Portfolio';
 import Contact from '../../Containers/Contact/Contact';
 import Modal from '../Modal/Modal';
 import LogIn from '../../Containers/LogIn/LogIn';
+import AddPortfolio from '../../Components/AddPortfolio/AddPortfolio';
 
 class Layout extends Component {
     state = {
-        currentPage: null
+        currentPage: 'addPortfolio'
     }
 
     logoClickHandler = (event) => {
@@ -70,11 +71,14 @@ class Layout extends Component {
             rightArrowClicked={() => this.arrowClickHandler('right')}
             content={
                 <Portfolio
-                    addPortfolioClicked={() => console.log('object')}
+                    addPortfolioClicked={() => this.pageHandler('addPortfolio')}
                     currentUser={this.props.currentUser}
                     isAdmin={this.props.isAdmin}
                 />}
         />;
+        const addPortfolioLg = <Modal
+            content={<AddPortfolio />}
+        />
         const contactLg = <Modal
             closeBtnClicked={() => this.pageHandler(null)}
             leftArrowClicked={() => this.arrowClickHandler('left')}
@@ -136,6 +140,13 @@ class Layout extends Component {
                     page = logInLg;
                 } else {
                     page = logInLg;
+                }
+                break;
+            case 'addPortfolio':
+                if (window.innerWidth < breakPoint) {
+                    page = null;
+                } else {
+                    page = addPortfolioLg;
                 }
                 break;
             default:

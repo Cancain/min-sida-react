@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 
 const addPortfolio = (props) => {
 
-    let [count, setCount] = useState(0);
+    let [title, setTitle] = useState(null);
+    let [body, setBody] = useState(null)
 
     const click = () => {
-        setCount(count + 1);
+        setTitle('hello world');
     }
 
     return (
         <div>
-            <button onClick={this.click}>Click</button>
+            <label>{title}</label>
+            <button onClick={click}>Click</button>
         </div>
     )
 }
