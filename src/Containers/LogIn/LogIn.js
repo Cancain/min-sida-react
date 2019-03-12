@@ -37,6 +37,7 @@ class LogIn extends Component {
             axios.post(
                 'Users/logIn/-1', data)
                 .then(response => {
+                    console.log(response.data);
                     this.setState({ errMsg: response.data['errMsg'] })
                     if (response.data['loginSuccess'] === true) {
                         this.userHandler(response.data['foundUser']);

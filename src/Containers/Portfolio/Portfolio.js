@@ -16,6 +16,7 @@ class Portfolio extends Component {
         //Gets all the portfolio-posts from a database and adds to state
         axios.get('Portfolios/getAllPortfolios/-1')
             .then(response => {
+                console.log(response.data)
                 const portfolio = response.data.portfolio;
                 const links = response.data.links;
                 this.setState({
@@ -31,11 +32,8 @@ class Portfolio extends Component {
         if (this.state.portfolio != null) {
             portfolioHandler = this.state.portfolio.map(post => {
                 return (
-                    <Fragment>
-                        < Drawers
-                            key={post.id}
-                            description={post.title}
-                        >
+                    <Fragment key={post.id}>
+                        <Drawers description={post.title}>
                             <small>{post.createdAt}
                             </small>
                             <br></br>
