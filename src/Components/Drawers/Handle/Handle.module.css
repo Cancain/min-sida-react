@@ -34,7 +34,7 @@
 
 .subDrawer {
     background-color: #253839; 
-    height: 15px;   
+    height: 15px;  
 }
 
 .subDrawer p {
@@ -47,6 +47,6 @@
     }
 
     .Handle {
-        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4));
+        
     }
 }
