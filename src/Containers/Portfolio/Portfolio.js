@@ -16,7 +16,6 @@ class Portfolio extends Component {
         //Gets all the portfolio-posts from a database and adds to state
         axios.get('Portfolios/getAllPortfolios/-1')
             .then(response => {
-                console.log(response.data)
                 const portfolio = response.data.portfolio;
                 const links = response.data.links;
                 this.setState({
@@ -55,7 +54,7 @@ class Portfolio extends Component {
 
         return (
             <div className={style.Portfolio} >
-                {this.props.currentUser ? <button>Add portfolio</button> : null}
+                {this.props.isAdmin ? <button>Add portfolio</button> : null}
                 <div>
                     <h1>Portfolio</h1>
                 </div>

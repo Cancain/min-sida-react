@@ -88,6 +88,9 @@ class Layout extends Component {
             content={
                 <LogIn
                     logInUser={this.props.logInUser}
+                    isAdmin={this.props.isAdmin}
+                    currentUser={this.props.currentUser}
+                    logOut={this.props.logOut}
                 />}
         />;
 
@@ -151,7 +154,9 @@ class Layout extends Component {
                     breakPoint={breakPoint}
                     navItemClicked={(event) => this.pageHandler(event)}
                 />
+                {/* if the windowidth is more then the breakpoint it automaticly renders the splash screen as background */}
                 {window.innerWidth > breakPoint ? <Splash logoClick={(event) => this.logoClickHandler(event)} /> : null}
+
                 {page}
                 <button onClick={() => console.log(this.props.currentUser)}>Who is logged in?</button>
 

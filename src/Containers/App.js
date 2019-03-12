@@ -12,11 +12,21 @@ class App extends Component {
     isAdmin: false
   }
 
+  //sets the loged in user as currentUser and if the user is admin, 
+  //sets the isAdmin state to true
   startUserSession = (user) => {
+    console.log(user);
     this.isAdmin(user.id);
-    this.setState({ currentUser: user.id })
+    this.setState({ currentUser: user })
   }
 
+  endUserSession = () => {
+    this.setState({ currentUser: null, isAdmin: false });
+    console.log('logging out');
+  }
+
+  //Reaches out to the API and checks if the users ID has admin right
+  //if true sets the state of isAdmin to true
   isAdmin = (id) => {
     axios.get('Users/isAdmin/' + id)
       .then(response => {
@@ -32,7 +42,9 @@ class App extends Component {
       <Fragment>
         <Layout
           logInUser={(event) => this.startUserSession(event)}
+          isAdmin={this.state.isAdmin}
           currentUser={this.state.currentUser}
+          logOut={this.endUserSession}
         />
       </Fragment>
     );
