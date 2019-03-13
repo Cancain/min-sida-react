@@ -35,8 +35,6 @@ class User extends Database {
             return true;
         } else {
             return false;
-        }
-
-        
+        }        
     }
 }

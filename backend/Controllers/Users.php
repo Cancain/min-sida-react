@@ -29,4 +29,31 @@ class Users extends Controller{
 
         echo var_dump($data);
     }
+
+    public function sendMail(){
+        $data = json_decode(file_get_contents('php://input'), true);
+
+        $message = htmlspecialchars($data['text']);
+        $fromMail = htmlspecialchars($data['mail']);
+        $toEmail = 'eriksson.tomas@gmail.com';
+        $subject = 'Message from your website';
+
+        $body = '<h2>Contact request<h2>
+        <h4>Email</h4><p>'.$fromMail.'</p>
+        <h4>Message</h4><p>'.$message.'</p>';
+
+        //Email headers
+        $headers = "MIME-Version: 1.0" ."\r\n";
+        $headers .= "Content-Type:text/html;charset=UTF-8" . "
+            \r\n";
+
+        //Additional headers
+        $headers .= "From: " . "<".$fromMail.">"."\r\n";
+
+        if(mail($toEmail, $subject, $body, $headers)){
+            echo "Mail sent";
+        } else {
+            echo "Mail failed, try again later";
+        }
+    }
 }

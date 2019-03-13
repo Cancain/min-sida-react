@@ -1,17 +1,45 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 import style from './Contact.module.css';
 
 const contact = (props) => {
+
+    let [mail, setMail] = useState();
+    let [text, setText] = useState();
+
+    const submitHandler = () => {
+        const data = {
+            mail: mail,
+            text: text
+        }
+        axios.post(
+            'Users/sendMail/-1', data)
+            .then(response => {
+                console.log(response.data);
+            });
+    }
+
     return (
         <div className={style.Contact}>
             <h1>Contact me</h1>
             <div className={style.Wrapper}>
                 <label>Email:</label>
-                <input placeholder="Your email here..." type="text"></input>
+
+                <input
+                    onChange={(event) => setMail(event.target.value)}
+                    placeholder="Your email here..."
+                    type="text">
+                </input>
+
                 <label>Message:</label>
-                <textarea placeholder="Your message here..."></textarea>
-                <button>Send mail</button>
+                <textarea
+                    onChange={(event) => setText(event.target.value)}
+                    placeholder="Your message here..."
+                >
+                </textarea>
+
+                <button onClick={submitHandler}>Send mail</button>
             </div>
         </div >
     )
