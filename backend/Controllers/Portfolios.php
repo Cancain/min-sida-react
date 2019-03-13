@@ -16,5 +16,11 @@ class Portfolios extends Controller{
 
         $this->portfolioModel->addPortfolio($data);        
     }
+
+    public function getHighestId(){
+        $data = $this->portfolioModel->getHighestId();
+
+        echo(json_encode($data));
+    }
 }
 

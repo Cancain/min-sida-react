@@ -11,8 +11,12 @@ class AddPortfolio extends Component {
         links: [
             {}
         ],
-        errMsg: null
+        errMsg: null,
+        highestId: null
+    }
 
+    componentDidMount() {
+        this.getHighestId();
     }
 
     //Adds two new inputs who takes in data about one more link
@@ -32,7 +36,9 @@ class AddPortfolio extends Component {
         const links = this.state.links;
         let link;
 
-        isUrl ? link = { url: event.target.value, text: links[index].text } : link = { text: event.target.value, url: links[index].url }
+        isUrl ?
+            link = { url: event.target.value, text: links[index].text } :
+            link = { text: event.target.value, url: links[index].url }
         links[index] = link;
     }
 
@@ -40,17 +46,27 @@ class AddPortfolio extends Component {
     verifyData = () => {
         const title = this.state.title;
         const body = this.state.body;
-        console.log('title is: ' + title);
-        console.log('body is: ' + body);
         if (title !== null &&
             body !== null) {
             this.setState({ errMsg: null })
             return true;
         } else {
-            console.log('false');
             this.setState({ errMsg: 'No field can be empty' })
             return false;
         }
+    }
+
+    //Gets the highest posible ID in the talble "portfolios"
+    //sets the highest id to "highestId" under state
+    getHighestId = () => {
+        axios.get('Portfolios/getHighestId/-1')
+            .then(response => {
+
+                const id = parseInt(response.data);
+                this.setState({ highestId: id });
+                console.log(typeof (id));
+                console.log(id + 1);
+            });
     }
 
     //Connects to the API and adds the post
@@ -111,6 +127,8 @@ class AddPortfolio extends Component {
                 >
                 </input>
                 {this.state.errMsg ? <span>{this.state.errMsg}</span> : null}
+
+                <button onClick={this.getHighestId}>ID</button>
 
             </div>
         )

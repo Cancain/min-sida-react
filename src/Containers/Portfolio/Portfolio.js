@@ -16,6 +16,7 @@ class Portfolio extends Component {
         //Gets all the portfolio-posts from a database and adds to state
         axios.get('Portfolios/getAllPortfolios/-1')
             .then(response => {
+                console.log(response.data)
                 const portfolio = response.data.portfolio;
                 const links = response.data.links;
                 this.setState({
@@ -26,7 +27,6 @@ class Portfolio extends Component {
     }
 
     render() {
-        console.log('is admin: ' + this.props.isAdmin);
         // Renders all the added posts from the state inside a Drawer
         let portfolioHandler;
         if (this.state.portfolio != null) {

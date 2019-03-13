@@ -37,10 +37,25 @@ class Portfolio extends Database{
 
         $this->db->execute();
 
+        $this->db->query('INSERT INTO links(text, url, portfolioId)
+                            VALUES (:text, :url, portfolioId)');
 
-        echo $data['body'];
-        echo $data['title'];
-        echo var_dump($data['links']);
+        // $this->db->bind('text', )
 
+        $id = (int)$data['highestId'] + 1;
+        for ($i=0; $i < count($data['links']); $i++) { 
+            $data['links'][$i]['portfolioId'] = $id;
+        }
+
+        var_dump($data['links']);
+
+    }
+
+    public function getHighestId(){
+        $this->db->query('SELECT MAX(id)
+                            FROM portfolio');
+        $data = $this->db->fetchColumn();
+
+        return $data;
     }
 }

@@ -77,6 +77,12 @@ class Database{
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    //Get single column as string
+    public function fetchColumn(){
+        $this->execute();
+        return $this->stmt->fetchColumn();
+    }
+
     //Get row count
     public function rowCount(){
         return $this->stmt->rowCount();
