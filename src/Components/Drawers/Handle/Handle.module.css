@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.Handle:hover{
+    color: white;
+}
+
 .Handle p {
     width: 95%;
     color: #728687;

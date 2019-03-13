@@ -47,6 +47,12 @@
     font-size: 1.5rem;
 }
 
+.RightArrow:hover,
+.CloseBtn:hover, 
+.LeftArrow:hover{
+    color: white;
+}
+
 .RightArrow {
     right: 0%;
 }
@@ -54,6 +60,10 @@
 .Closed {
     opacity: 0.2;
     cursor: default;
+}
+
+.Closed:hover{
+    color: #728687;
 }
 
 .LeftArrow {

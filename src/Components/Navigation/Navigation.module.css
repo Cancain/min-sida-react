@@ -21,4 +21,8 @@
     .Navigation {
         position: fixed;
     }    
+
+    .Navigation h2:hover {    
+        color: white;
+    }
 }

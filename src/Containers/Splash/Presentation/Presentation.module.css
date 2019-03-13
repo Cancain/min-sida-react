@@ -61,7 +61,7 @@
 
     .Presentation i:hover{
         animation-name: focus;
-        animation-duration: 0.6s;
+        animation-duration: 0.1s;
         animation-fill-mode: forwards;
     }
 }
