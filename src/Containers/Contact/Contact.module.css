@@ -1,0 +1,42 @@
+.Contact {
+    margin-top: 90px;
+    text-align: center;
+    color: #718586;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 8px black;
+}
+
+.Contact h1 {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.5rem;
+    color: #728687;
+}
+
+.Wrapper {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Contact textarea {
+    height: 50vh;
+}
+
+.Contact textarea,
+.Contact input {
+    padding: 5px;
+    font-size: 1.5rem;
+}
+
+.Contact button {
+    height: 50px;
+    font-size: 1.5rem;    
+}
+
+@media (min-width:1025px){
+    .Wrapper {
+        width: 93%;
+    }
+}
