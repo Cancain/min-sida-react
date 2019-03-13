@@ -4,4 +4,36 @@
     flex-flow: column;
     justify-content: center;
     width: 60%;
+    text-align: center;
+}
+
+.AddPortfolio h1 {
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 8px black;
+    color: #728687;
+}
+
+.AddPortfolio textarea,
+.AddPortfolio input 
+.AddPortfolio button {
+    box-shadow: 1px 1px 1px black;
+    padding: 2.5px;
+    margin-top: 5px;
+    font-size: 1.3rem;
+}
+
+.AddPortfolio textarea {
+    height: 150px;
+    
+}
+
+.AddPortfolio div{    
+    display: flex;
+    flex-flow: row;
+    margin: 5px 0 0 0;
+}
+.AddPortfolio div input{
+    width: 50%;
 }

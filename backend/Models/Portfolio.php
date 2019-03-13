@@ -38,16 +38,15 @@ class Portfolio extends Database{
         $this->db->execute();
 
         $this->db->query('INSERT INTO links(text, url, portfolioId)
-                            VALUES (:text, :url, portfolioId)');
-
-        // $this->db->bind('text', )
+                            VALUES (:text, :url, :portfolioId)');
 
         $id = (int)$data['highestId'] + 1;
-        for ($i=0; $i < count($data['links']); $i++) { 
-            $data['links'][$i]['portfolioId'] = $id;
+        for ($i=0; $i < count($data['links']); $i++) {
+            $this->db->bind('text', $data['links'][$i]['text']);
+            $this->db->bind('url', $data['links'][$i]['url']);
+            $this->db->bind('portfolioId', $id);
+            $this->db->execute();
         }
-
-        var_dump($data['links']);
 
     }
 

@@ -99,6 +99,7 @@ class AddPortfolio extends Component {
 
         return (
             <div className={style.AddPortfolio}>
+                <h1>Add Portfolio</h1>
                 <input
                     type="text"
                     placeholder="Title goes here"
@@ -112,13 +113,12 @@ class AddPortfolio extends Component {
                 >
                 </textarea>
 
+                {linkInputHandler}
                 <button
                     onClick={this.addLinkHandler}
                 >
                     Add link
                 </button>
-
-                {linkInputHandler}
 
                 <input
                     type="button"
@@ -127,8 +127,6 @@ class AddPortfolio extends Component {
                 >
                 </input>
                 {this.state.errMsg ? <span>{this.state.errMsg}</span> : null}
-
-                <button onClick={this.getHighestId}>ID</button>
 
             </div>
         )

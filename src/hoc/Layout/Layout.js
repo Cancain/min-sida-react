@@ -77,6 +77,7 @@ class Layout extends Component {
                 />}
         />;
         const addPortfolioLg = <Modal
+            closeBtnClicked={() => this.pageHandler(null)}
             content={<AddPortfolio />}
         />
         const contactLg = <Modal

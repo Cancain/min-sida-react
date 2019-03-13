@@ -9,7 +9,7 @@ class App extends Component {
 
   state = {
     currentUser: null,
-    isAdmin: true //todo switch this over to false when not testing!
+    isAdmin: false
   }
 
   //sets the loged in user as currentUser and if the user is admin, 
