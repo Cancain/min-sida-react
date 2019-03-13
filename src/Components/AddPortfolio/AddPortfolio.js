@@ -61,11 +61,8 @@ class AddPortfolio extends Component {
     getHighestId = () => {
         axios.get('Portfolios/getHighestId/-1')
             .then(response => {
-
                 const id = parseInt(response.data);
                 this.setState({ highestId: id });
-                console.log(typeof (id));
-                console.log(id + 1);
             });
     }
 
@@ -110,7 +107,6 @@ class AddPortfolio extends Component {
             <div className={style.AddPortfolio}>
                 <h1>Add Portfolio</h1>
                 <input
-                    value={this.state.title}
                     type="text"
                     placeholder="Title goes here"
                     onChange={(event) => this.setState({ title: event.target.value })}

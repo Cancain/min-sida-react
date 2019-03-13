@@ -9,13 +9,12 @@ class App extends Component {
 
   state = {
     currentUser: null,
-    isAdmin: true
+    isAdmin: false
   }
 
   //sets the loged in user as currentUser and if the user is admin, 
   //sets the isAdmin state to true
   startUserSession = (user) => {
-    console.log(user);
     this.isAdmin(user.id);
     this.setState({ currentUser: user })
   }
@@ -33,7 +32,6 @@ class App extends Component {
         const admin = response.data;
 
         this.setState({ isAdmin: admin })
-        console.log(this.state.isAdmin);
       })
   }
 

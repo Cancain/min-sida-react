@@ -32,4 +32,9 @@
         position: relative;
         margin: 0;
     }
+
+    .NavItem p:hover{
+        color: white;
+        background-color: rgba;
+    }
 }
