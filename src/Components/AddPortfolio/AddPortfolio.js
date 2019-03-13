@@ -78,7 +78,6 @@ class AddPortfolio extends Component {
                 .then(response => {
                     console.log(response.data);
                     this.setState({ errMsg: 'Post Added' });
-                    this.resetPost();
                 });
         }
     }

@@ -12,7 +12,8 @@ class Portfolio extends Database{
     }
 
     public function getAllPortfolio(){
-        $this->db->query('SELECT * FROM portfolio');
+        $this->db->query('SELECT * FROM portfolio
+                            ORDER BY createdAt DESC');
 
         $data = [
             'portfolio' => $this->db->fetchMultiple(),
