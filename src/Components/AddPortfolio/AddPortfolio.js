@@ -15,6 +15,7 @@ class AddPortfolio extends Component {
 
     }
 
+    //Adds two new inputs who takes in data about one more link
     addLinkHandler = () => {
         let links = this.state.links;
         const emptyLink = {
@@ -25,6 +26,8 @@ class AddPortfolio extends Component {
         this.setState({ links: links })
     }
 
+    //Saves the text fom the input
+    //IsUrl is a boolean to decide whether the function should update url or text for the link
     saveLinkHandler = (index, event, isUrl) => {
         const links = this.state.links;
         let link;
@@ -33,6 +36,7 @@ class AddPortfolio extends Component {
         links[index] = link;
     }
 
+    //Verifies that there is no errors int he text for the title and body
     verifyData = () => {
         const title = this.state.title;
         const body = this.state.body;
@@ -49,6 +53,7 @@ class AddPortfolio extends Component {
         }
     }
 
+    //Connects to the API and adds the post
     submitHandler = () => {
         if (this.verifyData()) {
             const data = this.state;
