@@ -77,8 +77,18 @@ class AddPortfolio extends Component {
             axios.post('Portfolios/addPortfolio/-1', json)
                 .then(response => {
                     console.log(response.data);
+                    this.setState({ errMsg: 'Post Added' });
+                    this.resetPost();
                 });
         }
+    }
+
+    resetPost = () => {
+        this.setState({
+            title: null,
+            body: null,
+            links: [{}]
+        })
     }
 
     render() {
@@ -101,6 +111,7 @@ class AddPortfolio extends Component {
             <div className={style.AddPortfolio}>
                 <h1>Add Portfolio</h1>
                 <input
+                    value={this.state.title}
                     type="text"
                     placeholder="Title goes here"
                     onChange={(event) => this.setState({ title: event.target.value })}

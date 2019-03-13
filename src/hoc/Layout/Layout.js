@@ -61,6 +61,7 @@ class Layout extends Component {
         //Constants holding the different pages
         //Big screens
         const aboutMeLg = <Modal
+            arrowDisabled={'left'}
             closeBtnClicked={() => this.pageHandler(null)}
             leftArrowClicked={() => this.arrowClickHandler('left')}
             rightArrowClicked={() => this.arrowClickHandler('right')}
@@ -81,6 +82,7 @@ class Layout extends Component {
             content={<AddPortfolio />}
         />
         const contactLg = <Modal
+            arrowDisabled="right"
             closeBtnClicked={() => this.pageHandler(null)}
             leftArrowClicked={() => this.arrowClickHandler('left')}
             rightArrowClicked={() => this.arrowClickHandler('right')}

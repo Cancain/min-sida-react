@@ -25,8 +25,7 @@
 }
 
 .AddPortfolio textarea {
-    height: 150px;
-    
+    height: 150px;    
 }
 
 .AddPortfolio div{    
@@ -36,4 +35,10 @@
 }
 .AddPortfolio div input{
     width: 50%;
+}
+
+.AddPortfolio span {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }

@@ -25,6 +25,7 @@ class Portfolio extends Database{
             'portfolio' => $data['portfolio'],
             'links' => $this->db->fetchMultiple()            
         ];
+        
         $data = json_encode($data);
         return $data;
     }
@@ -33,7 +34,7 @@ class Portfolio extends Database{
         $this->db->query('INSERT INTO portfolio(title, body)
                             VALUES (:title, :body)');
         $this->db->bind('title', $data['title']);
-        $this->db->bind('body', $data['body']);
+        $this->db->bind('body', nl2br($data['body']));
 
         $this->db->execute();
 

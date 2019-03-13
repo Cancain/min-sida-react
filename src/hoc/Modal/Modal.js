@@ -4,6 +4,9 @@ import style from './Modal.module.css';
 
 const modal = (props) => {
 
+    const leftDisabled = [style.LeftArrow, style.Closed]
+    const rightDisabled = [style.RightArrow, style.Closed]
+
     return (
         <div className={style.Modal}>
             <div
@@ -13,17 +16,17 @@ const modal = (props) => {
             </div>
             <div
                 onClick={props.rightArrowClicked}
-                className={style.RightArrow}>
+                className={props.arrowDisabled === 'right' ? rightDisabled.join(' ') : style.RightArrow}>
                 <h2>></h2>
             </div>
             <div
                 onClick={props.leftArrowClicked}
-                className={style.LeftArrow}>
+                className={props.arrowDisabled === 'left' ? leftDisabled.join(' ') : style.LeftArrow}>
                 <h2>{'<'}</h2>
             </div>
 
             {props.content}
-        </div>
+        </div >
     )
 }
 

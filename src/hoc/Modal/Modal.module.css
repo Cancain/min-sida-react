@@ -51,6 +51,11 @@
     right: 0%;
 }
 
+.Closed {
+    opacity: 0.1;
+    cursor: default;
+}
+
 .LeftArrow {
     left: 0%;
 }

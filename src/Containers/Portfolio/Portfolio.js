@@ -37,7 +37,7 @@ class Portfolio extends Component {
                             <small>{post.createdAt}
                             </small>
                             <br></br>
-                            <p>{post.body}</p>
+                            <p dangerouslySetInnerHTML={{ __html: post.body }} />
                             {/* this map checks the links portfoloioId
                         if it matches it renders the links with url and text */}
                             {
