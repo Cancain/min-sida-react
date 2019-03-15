@@ -4,6 +4,7 @@ import style from './AboutMe.module.css';
 
 import Drawers from '../../Components/Drawers/Drawers';
 import EightBitProfileImage from '../../Components/8BitProfileImage/8BitProfileImage';
+import RLProfileImage from '../../Components/RLProfileImage/RLProfileImage';
 import SkillProfiler from '../../Components/SkillProfiler/SkillProfiler';
 
 const aboutMe = (props) => {
@@ -21,6 +22,7 @@ const aboutMe = (props) => {
             <Drawers
                 description={'Introduction'}
             >
+                <RLProfileImage />
                 <h3>Adventurous nerd with an immense passion for coding and design.</h3>
                 <p> My name is Tomas Eriksson and live just outside of Gävle, Sweden.<br></br> <br></br>
 
