@@ -52,7 +52,14 @@
 
 @media (min-width: 1025px){
     .wrapper {
+        margin: 0 auto 10px auto;
         margin-bottom: 10px;
+        margin-top: 0;
+        text-align: center;
+        width: 92.5%;;
+    }
+
+    .AboutMe {
         margin-top: 10px;
     }
 }

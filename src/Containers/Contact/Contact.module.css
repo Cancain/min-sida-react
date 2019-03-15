@@ -1,9 +1,10 @@
 .Contact {
     margin-top: 75px;
     text-align: center;
-    color: #718586;
+    color: #163436;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 8px black;
+    text-shadow: 1px 1px 1px #728687;
+    font-weight: bolder;
 }
 
 .Contact h1 {
@@ -37,19 +38,21 @@
 
 .Contact textarea,
 .Contact input {
-    width: 90%;
+    width: 91%;
     margin: auto auto 5px auto;
     color: #728687;
     text-shadow: 2px 2px 8px black;
     box-shadow: 2px 2px 3px black;
     padding: 5px;
     border: 3px solid #718586;
+    border-right: 0;
+    border-left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     font-size: 1.9rem;
 }
 
 .Contact button {
-    width: 91.5%;
+    width: 100%;
     margin: 0 auto 0 auto;
     height: 50px;
     font-size: 1.5rem; 
@@ -65,12 +68,25 @@
     }
 
     .wrapper {
+        margin: 0 auto 10px auto;
         margin-bottom: 10px;
         margin-top: 0;
-        width: fit-content;
+        text-align: center;
+        width: 92.5%;
     }
 
     .Contact {
         margin-top: 10px;
+        color: #728687;
+        text-shadow: 1px 1px 1px transparent;
+    }
+
+    .Contact textarea,
+    .Contact input {
+        border: 3px solid #718586;
+    }
+
+    .Contact button {
+        width: 92.8%
     }
 }
