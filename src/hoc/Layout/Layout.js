@@ -53,6 +53,10 @@ class Layout extends Component {
     }
 
     render() {
+        //Renders the mediacomponent if the display is not big or the page is home or null
+        const width = window.innerWidth;
+        let mediaIcons = <MediaIcons />;
+        if (width >= 1024 || this.state.currentPage === 'home' || this.state.currentPage === null) mediaIcons = null;
 
         //A breakpoint for switching between mobile and desktop layout 
         const breakPoint = 1025;
@@ -176,7 +180,7 @@ class Layout extends Component {
                     {page}
 
                 </div>
-                <MediaIcons />
+                {mediaIcons}
             </React.Fragment>
         )
     }
