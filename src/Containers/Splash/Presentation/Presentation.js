@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Logo from '../../../Components/Logo/Logo';
+import MediaIcons from '../../../Components/MediaIcons/MediaIcons';
 import style from './Presentation.module.css'
 
 const presentation = (props) => {
@@ -9,11 +10,7 @@ const presentation = (props) => {
             <div className={style.Logo}>
                 <Logo logoClick={props.logoClick} />
             </div>
-            <div className={style.MediaIcons}>
-                <a href="https://github.com/Cancain" target="_blank" rel="noopener noreferrer"><i className="fab fa-github-square"></i></a>
-                <a href="https://twitter.com/TomasEr32931498" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square"></i></a>
-                <a href="https://www.linkedin.com/in/tomas-eriksson-712526177/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-            </div>
+            <MediaIcons />
         </div>
     )
 }
