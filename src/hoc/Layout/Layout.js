@@ -9,6 +9,7 @@ import Contact from '../../Containers/Contact/Contact';
 import Modal from '../Modal/Modal';
 import LogIn from '../../Containers/LogIn/LogIn';
 import AddPortfolio from '../../Components/AddPortfolio/AddPortfolio';
+import MediaIcons from '../../Components/MediaIcons/MediaIcons';
 
 class Layout extends Component {
     state = {
@@ -163,17 +164,20 @@ class Layout extends Component {
 
 
         return (
-            <div className={style.Layout} >
-                <Navigation
-                    breakPoint={breakPoint}
-                    navItemClicked={(event) => this.pageHandler(event)}
-                />
-                {/* if the windowidth is more then the breakpoint it automaticly renders the splash screen as background */}
-                {window.innerWidth > breakPoint ? <Splash logoClick={(event) => this.logoClickHandler(event)} /> : null}
+            <React.Fragment>
+                <div className={style.Layout} >
+                    <Navigation
+                        breakPoint={breakPoint}
+                        navItemClicked={(event) => this.pageHandler(event)}
+                    />
+                    {/* if the windowidth is more then the breakpoint it automaticly renders the splash screen as background */}
+                    {window.innerWidth > breakPoint ? <Splash logoClick={(event) => this.logoClickHandler(event)} /> : null}
 
-                {page}
+                    {page}
 
-            </div>
+                </div>
+                <MediaIcons />
+            </React.Fragment>
         )
     }
 }

@@ -12,20 +12,6 @@
     color: #728687;
     margin: 0 5vw;
     
-}   
-
-.MediaIcons {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: fit-content;
-    margin: 1.5vh 0;
-    padding: 5px 0;
-    width: 100vw;
-    box-shadow: 2px 2px 8px black;
 }
 
 @media (min-width: 1025px){
@@ -39,16 +25,6 @@
         background-color: #163436;
         box-shadow: 2px 2px 8px black;
         padding: 15px 30px 30px 30px;      
-    }
-
-    .MediaIcons {
-        position: relative;
-        display: flex;
-        flex-flow: column;
-        width: fit-content;
-        margin: 2vh 0 0 2vw;
-        padding: 5px;
-        border-radius: 7px;
     }
 
     .Presentation i {        

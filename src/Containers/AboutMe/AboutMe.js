@@ -6,13 +6,16 @@ import Drawers from '../../Components/Drawers/Drawers';
 import EightBitProfileImage from '../../Components/8BitProfileImage/8BitProfileImage';
 import RLProfileImage from '../../Components/RLProfileImage/RLProfileImage';
 import SkillProfiler from '../../Components/SkillProfiler/SkillProfiler';
+import MediaIcons from '../../Components/MediaIcons/MediaIcons';
 
 const aboutMe = (props) => {
-
+    const width = window.innerWidth;
     let imgStyle = { width: '40%' };
-    if (window.innerWidth >= 1024) {
+    if (width >= 1024) {
         imgStyle = {width: '20%'};
     }
+
+
 
         return (
             <div className={style.AboutMe}>
@@ -148,7 +151,6 @@ const aboutMe = (props) => {
                     </Drawers>
 
                 </Drawers>
-
             </div >
 
         )

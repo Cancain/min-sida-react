@@ -43,6 +43,7 @@ const contact = (props) => {
 
                 <button onClick={submitHandler}>Send mail</button>
             </div>
+
         </div >
     )
 }
