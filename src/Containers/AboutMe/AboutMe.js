@@ -24,18 +24,20 @@ const aboutMe = (props) => {
             >
                 <RLProfileImage />
                 <h3>Adventurous nerd with an immense passion for coding and design.</h3>
-                <p> My name is Tomas Eriksson and live just outside of Gävle, Sweden.<br></br> <br></br>
+                <p> My name is Tomas Eriksson and live just outside of Gävle in Sweden.<br></br><br></br>
 
-                    I used to work as a teacher but is now setting my aim for a new career in IT. <br></br><br></br>
+                    I used to work as a teacher but is now setting my aim for a new career in IT.<br></br><br></br>
 
-                    I am self taught in the basics of C#, java, html/css/sass, javaScript and PHP, mostly learning from courses on pluralsight and Udemy<br></br><br></br>
+                    I am self taught in C#, java, html/css, javascript and PHP, mostly learning from courses on Pluralsight and Udemy.
+                My main programming languagess right now are PHP for backend and Javascript(mostly React) for frontend.<br></br><br></br>
 
-                    My goal is to become competent in UX and JavaScript(node.js, cordova, jquery and react) to hopefully work with it professionally one day.<br></br><br></br>
+                    My short hand goal right now is to dive deeper into React and it’s related frameworks and modules.<br></br><br></br>
+                    I wish to learn either c++ or rust at a later date to get into web-assembly.<br></br><br></br>
 
-                    In addition to to web-design I spend time in the game engine unity and phaser, making simple games as a hobby.
-                There I use C# (unity) and JavaScript (phaser) for scripting, blender for 3d-modeling/animation and gimp/spriter for 2d-sprites and animation.<br></br><br></br>
+                    In addition to to web-design I spend time in the game engine Unity and Phaser, making simple games as a hobby.<br></br>
+                    There I use C# (unity) and JavaScript (phaser) for scripting, blender for 3d-modeling/animation and gimp/spriter for 2d-sprites and animation.<br></br><br></br>
 
-                    I will continually add projects to this site showing off what I do under “projects”.</p>
+                    I will continually add projects to this site showing off what I do under “projects”.</p><br></br>
             </Drawers>
 
             <Drawers
