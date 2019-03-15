@@ -1,5 +1,5 @@
 .Contact {
-    margin-top: 90px;
+    margin-top: 75px;
     text-align: center;
     color: #718586;
     font-size: 1.5rem;
@@ -13,7 +13,17 @@
     color: #728687;
 }
 
-.Wrapper {
+.wrapper {
+    box-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    margin: 0;
+    margin-bottom: 1vh;
+    width: 100vw;
+    height: fit-content;
+    background-color: rgba(0,0,0,0.4);
+    padding: 5px 0px 5px 0px;
+}
+
+.FormWrapper {
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -27,6 +37,8 @@
 
 .Contact textarea,
 .Contact input {
+    width: 90%;
+    margin: auto auto 5px auto;
     color: #728687;
     text-shadow: 2px 2px 8px black;
     box-shadow: 2px 2px 3px black;
@@ -37,6 +49,8 @@
 }
 
 .Contact button {
+    width: 91.5%;
+    margin: 0 auto 0 auto;
     height: 50px;
     font-size: 1.5rem; 
     background-color: #718586;   
@@ -46,7 +60,17 @@
 }
 
 @media (min-width:1025px){
-    .Wrapper {
-        width: 93%;
+    .FormWrapper {
+        width: 100%;
+    }
+
+    .wrapper {
+        margin-bottom: 10px;
+        margin-top: 0;
+        width: fit-content;
+    }
+
+    .Contact {
+        margin-top: 10px;
     }
 }

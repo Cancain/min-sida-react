@@ -1,7 +1,7 @@
 .AboutMe {
+    margin-top: 75px;
     text-align: center;
     color: #728687;
-    margin: 5px 0 0 0;
 }
 
 .AboutMe h1{
@@ -24,11 +24,12 @@
 
 .wrapper {
     box-shadow: 1px 1px 0 black, 2px 2px 0 black;
-    margin: 21% auto auto auto;
-    width: fit-content;
+    margin: 0;
+    margin-bottom: 1vh;
+    width: 100vw;
     height: fit-content;
     background-color: rgba(0,0,0,0.4);
-    padding: 2px;
+    padding: 5px 0px 5px 0px;
 }
 
 .AboutMe ul {

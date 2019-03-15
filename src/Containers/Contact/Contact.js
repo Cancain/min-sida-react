@@ -22,8 +22,10 @@ const contact = (props) => {
 
     return (
         <div className={style.Contact}>
-            <h1>Contact me</h1>
-            <div className={style.Wrapper}>
+            <div className={style.wrapper}>
+                <h1>Contact me</h1>
+            </div>
+            <div className={style.FormWrapper}>
                 <label>Email:</label>
 
                 <input

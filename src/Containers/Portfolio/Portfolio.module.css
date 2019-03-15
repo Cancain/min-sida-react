@@ -1,5 +1,5 @@
 .Portfolio {
-    margin-top: 100px;
+    margin-top: 75px;
     text-align: center;
 }
 
@@ -26,4 +26,25 @@
     font-size: 1.3rem;
     font-weight: bold;
     text-shadow: 2px 2px 8px black;
+}
+
+.wrapper {
+    box-shadow: 1px 1px 0 black, 2px 2px 0 black;
+    margin: 0;
+    margin-bottom: 1vh;
+    width: 100vw;
+    height: fit-content;
+    background-color: rgba(0,0,0,0.4);
+    padding: 5px 0px 5px 0px;
+}
+
+@media (min-width: 1025px) {
+    .wrapper {
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .Portfolio {
+        margin-top: 10px;
+    }
 }

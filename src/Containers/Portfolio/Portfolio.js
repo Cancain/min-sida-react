@@ -55,7 +55,7 @@ class Portfolio extends Component {
         return (
             <div className={style.Portfolio} >
                 {this.props.isAdmin ? <button onClick={this.props.addPortfolioClicked}>Add portfolio</button> : null}
-                <div>
+                <div className={style.wrapper}>
                     <h1>Portfolio</h1>
                 </div>
 
