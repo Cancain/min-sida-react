@@ -10,7 +10,9 @@ const presentation = (props) => {
             <div className={style.Logo}>
                 <Logo logoClick={props.logoClick} />
             </div>
-            <MediaIcons />
+            <div className={style.wrapper}>
+                <MediaIcons />
+            </div>
         </div>
     )
 }

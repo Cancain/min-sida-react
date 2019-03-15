@@ -5,6 +5,7 @@
 .Presentation {
     width: 100vw;
     margin: 50% 0 0 0;
+    height: 100vh;
 }
 
 .Presentation i {
@@ -12,6 +13,11 @@
     color: #728687;
     margin: 0 5vw;
     
+}
+
+.wrapper {
+    position: fixed;
+    bottom: 0;
 }
 
 @media (min-width: 1025px){
@@ -47,6 +53,8 @@
     .Presentation {
         margin: 15vh auto;
     }
+
+
     
 
 }

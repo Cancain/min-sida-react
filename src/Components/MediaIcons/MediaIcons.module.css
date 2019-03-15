@@ -1,6 +1,5 @@
 .MediaIcons {
-    position: sticky;
-    bottom: 0;
+    position: relative;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -29,5 +28,13 @@
         margin: 2vh 0 0 2vw;
         padding: 5px;
         border-radius: 7px;
+    }
+}
+
+@media (max-width: 1025px) {
+
+    .MediaIcons {
+        position: sticky;
+        bottom: 10px;
     }
 }

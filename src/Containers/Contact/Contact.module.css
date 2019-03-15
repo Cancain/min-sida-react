@@ -16,8 +16,7 @@
 
 .wrapper {
     box-shadow: 1px 1px 0 black, 2px 2px 0 black;
-    margin: 0;
-    margin-bottom: 1vh;
+    margin: 0 0 1vh 0;
     width: 100vw;
     height: fit-content;
     background-color: rgba(0,0,0,0.4);
@@ -32,13 +31,13 @@
 }
 
 .Contact textarea {
-    height: 50vh;
+    height: 40vh;
 
 }
 
 .Contact textarea,
 .Contact input {
-    width: 91%;
+    width: 96.5%;
     margin: auto auto 5px auto;
     color: #728687;
     text-shadow: 2px 2px 8px black;
@@ -49,6 +48,11 @@
     border-left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     font-size: 1.9rem;
+}
+.Contact label {
+    text-align: start;
+    width: fit-content;
+    margin-left: 3.2%;
 }
 
 .Contact button {
@@ -65,12 +69,11 @@
 @media (min-width:1025px){
     .FormWrapper {
         width: 100%;
+        margin: auto;
     }
 
     .wrapper {
         margin: 0 auto 10px auto;
-        margin-bottom: 10px;
-        margin-top: 0;
         text-align: center;
         width: 92.5%;
     }
@@ -81,12 +84,19 @@
         text-shadow: 1px 1px 1px transparent;
     }
 
+    .Contact textarea {
+        height: 50vh;
+    }
+
     .Contact textarea,
     .Contact input {
         border: 3px solid #718586;
+        width: 92.5%;
+        margin: auto auto 10px auto;
+        padding: 0;
     }
 
     .Contact button {
-        width: 92.8%
+        width: 92.5%
     }
 }
