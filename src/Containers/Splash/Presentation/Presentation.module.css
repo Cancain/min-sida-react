@@ -33,6 +33,10 @@
         padding: 15px 30px 30px 30px;      
     }
 
+    .wrapper {
+        position: relative;
+    }
+
     .Presentation i {        
         text-shadow: 2px 2px 8px black;
         font-size: 5vw;
