@@ -18,7 +18,6 @@ class Portfolio extends Component {
             .then(response => {
                 const portfolio = response.data.portfolio;
                 const links = response.data.links;
-                console.log(response.data)
                 this.setState({
                     portfolio: portfolio,
                     links: links
@@ -40,13 +39,25 @@ class Portfolio extends Component {
                             <p dangerouslySetInnerHTML={{ __html: post.body }} />
                             {/* this map checks the links portfoloioId
                         if it matches it renders the links with url and text */}
-                            {
-                                this.state.links.map(link => {
-                                    return link.portfolioId === post.id ?
-                                        <div key={link.id}><a href={link.url}>{link.text}</a><br></br></div> :
-                                        null;
-                                })
-                            }
+                            <div className={style.LinkWrapper}>
+                                {
+
+                                    this.state.links.map(link => {
+                                        return link.portfolioId === post.id ?
+                                            <div
+                                                key={link.id}>
+                                                <a
+                                                    href={link.url}
+                                                    rel='noreferrer noopener'
+                                                    target="_blank">{link.text}
+                                                </a>
+                                                <br></br>
+                                            </div>
+                                            :
+                                            null;
+                                    })
+                                }
+                            </div>
                         </Drawers >
                     </Fragment>
                 )

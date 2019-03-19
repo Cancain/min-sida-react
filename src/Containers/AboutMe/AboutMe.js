@@ -13,9 +13,6 @@ const aboutMe = (props) => {
     if (width >= 1024) {
         imgStyle = {width: '20%'};
     }
-
-
-
         return (
             <div className={style.AboutMe}>
                 <div className={style.wrapper}>

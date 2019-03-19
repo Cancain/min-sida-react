@@ -14,7 +14,8 @@
     text-decoration: none;
     color: #728687;
     text-shadow: 2px 2px 8px black;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 .linkWrapper {
@@ -38,6 +39,17 @@
     padding: 5px 0px 5px 0px;
 }
 
+.LinkWrapper {    
+    border-radius: 7px 7px 7px 7px;
+    padding-top: 10px;
+}
+
+.LinkWrapper div {
+    background-color: rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
 @media (min-width: 1025px) {
     .wrapper {
         margin: 0 auto 10px auto;
@@ -49,5 +61,27 @@
 
     .Portfolio {
         margin-top: 10px;
+    }
+
+    .Portfolio a {
+        margin-bottom: 5px;
+        background-color: transparent;
+        box-shadow: 0 0 0 0;
+    }
+
+    .Portfolio a:hover {
+        color: white;
+    }
+
+    .LinkWrapper { 
+         
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;        
+    }
+    
+    .LinkWrapper div {
+        padding: 10px; 
+        width: fit-content;
     }
 }

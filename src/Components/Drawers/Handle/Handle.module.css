@@ -46,6 +46,7 @@
 }
 .Handle .subDrawer {
     margin-bottom: 0;
+    font-size: 0.1rem !important;
 }
 
 .subDrawer p {

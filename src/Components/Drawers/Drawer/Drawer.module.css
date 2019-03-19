@@ -11,31 +11,37 @@
 .Drawer {    
     box-sizing: border-box;
     color: #728687;
-    background-color: rgba(0,0,0,0.25);
     height: 0px;
     overflow: hidden;
 }
+
+.Drawer p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 1rem 1rem 1rem;
+}
+
 
 .DrawerOpen {
     height: fit-content;
     animation-name: fadeIn;
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
+    background-color: rgba(0,0,0,0.25);
 }
 
 .DrawerClosed {  
     animation-name: fadeOut;
     animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    
-}
-
-.Drawer p {
-    margin: 0 1rem 1rem 1rem;
+    animation-fill-mode: forwards;    
 }
 
 @media (min-width: 1025px){
     .Drawer ul {
         margin-left: 1vw;
+    }
+
+    .DrawerOpen{
+        background-color: transparent;
     }
 }
