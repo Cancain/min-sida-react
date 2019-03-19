@@ -13,7 +13,7 @@ const drawer = (props) => {
             className={attachedStyles.join(' ')}
         >
 
-            <div className={style.HeadLineWrapper}>
+            <div className={style.HeadlineWrapper}>
                 {props.text}
             </div >
 
