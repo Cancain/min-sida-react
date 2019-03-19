@@ -6,7 +6,6 @@ import Drawers from '../../Components/Drawers/Drawers';
 import EightBitProfileImage from '../../Components/8BitProfileImage/8BitProfileImage';
 import RLProfileImage from '../../Components/RLProfileImage/RLProfileImage';
 import SkillProfiler from '../../Components/SkillProfiler/SkillProfiler';
-import MediaIcons from '../../Components/MediaIcons/MediaIcons';
 
 const aboutMe = (props) => {
     const width = window.innerWidth;

@@ -18,6 +18,7 @@ class Portfolio extends Component {
             .then(response => {
                 const portfolio = response.data.portfolio;
                 const links = response.data.links;
+                console.log(response.data)
                 this.setState({
                     portfolio: portfolio,
                     links: links
