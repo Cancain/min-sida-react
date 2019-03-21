@@ -9,7 +9,6 @@ class Navigation extends Component {
     state = {
         sideDrawerOpen: false,
         menuItems: [
-            { text: 'home', id: 0 },
             { text: 'about', id: 1 },
             { text: 'portfolio', id: 2 },
             { text: 'contact', id: 3 }
