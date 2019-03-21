@@ -13,10 +13,13 @@ class Contact extends Component {
     }
 
     render() {
+
         const resetText = () => {
             this.setState({ text: '', mail: '' })
         }
 
+        //Updates the state when values changes in the form
+        //The target parameter changes what state to update, "mail" for mail or "text" for text
         const handleChange = (event, target) => {
 
             if (target === 'mail') {
@@ -26,19 +29,26 @@ class Contact extends Component {
             }
         }
 
+
         const submitHandler = () => {
+            //Variable holding the data from the state
             const data = {
                 mail: this.state.mail,
                 text: this.state.text
             }
+
+            //sends the data to the backend
             axios.post(
                 'Users/sendMail/-1', data)
                 .then(response => {
+                    //If successfull, updates error and mailSent state, and empties state of text and mail
                     this.setState({ error: false })
                     this.setState({ mailSent: true })
                     resetText()
                 })
                 .catch(e => {
+                    //In case of error sets error to true and displays an error message 
+                    //Sets mailSent to false, so the wrong response won't be shown
                     this.setState({ mailSent: false })
                     this.setState({ error: true })
                 });
