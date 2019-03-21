@@ -7,6 +7,7 @@ const contact = (props) => {
 
     let [mail, setMail] = useState();
     let [text, setText] = useState();
+    let [responseMsg, setResponseMsg] = useState();
 
     const submitHandler = () => {
         const data = {
@@ -17,7 +18,13 @@ const contact = (props) => {
             'Users/sendMail/-1', data)
             .then(response => {
                 console.log(response.data);
+                setResponseMsg('Mail sent');
+            })
+            .catch(error => {
+                console.log(error);
+                setResponseMsg(error);
             });
+
     }
 
     return (
@@ -42,6 +49,7 @@ const contact = (props) => {
                 </textarea>
 
                 <button onClick={submitHandler}>Send mail</button>
+                <label>{responseMsg}</label>
             </div>
 
         </div >
