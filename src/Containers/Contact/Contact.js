@@ -1,59 +1,98 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 import style from './Contact.module.css';
 
-const contact = (props) => {
+class Contact extends Component {
 
-    let [mail, setMail] = useState();
-    let [text, setText] = useState();
-    let [responseMsg, setResponseMsg] = useState();
-
-    const submitHandler = () => {
-        const data = {
-            mail: mail,
-            text: text
-        }
-        axios.post(
-            'Users/sendMail/-1', data)
-            .then(response => {
-                console.log(response.data);
-                setResponseMsg('Mail sent');
-            })
-            .catch(error => {
-                console.log(error);
-                setResponseMsg(error);
-            });
-
+    state = {
+        text: '',
+        mail: '',
+        error: false,
+        mailSent: false
     }
 
-    return (
-        <div className={style.Contact}>
-            <div className={style.wrapper}>
-                <h1>Contact me</h1>
-            </div>
-            <div className={style.FormWrapper}>
-                <label>Email:</label>
+    render() {
+        const resetText = () => {
+            this.setState({ text: '', mail: '' })
+        }
 
-                <input
-                    onChange={(event) => setMail(event.target.value)}
-                    placeholder="Your email here..."
-                    type="text">
-                </input>
+        const handleChange = (event, target) => {
 
-                <label>Message:</label>
-                <textarea
-                    onChange={(event) => setText(event.target.value)}
-                    placeholder="Your message here..."
-                >
-                </textarea>
+            if (target === 'mail') {
+                this.setState({ mail: event.target.value })
+            } else if (target === 'text') {
+                this.setState({ text: event.target.value })
+            }
+        }
 
-                <button onClick={submitHandler}>Send mail</button>
-                <label>{responseMsg}</label>
-            </div>
+        const submitHandler = () => {
+            const data = {
+                mail: this.state.mail,
+                text: this.state.text
+            }
+            axios.post(
+                'Users/sendMail/-1', data)
+                .then(response => {
+                    this.setState({ error: false })
+                    this.setState({ mailSent: true })
+                    resetText()
+                })
+                .catch(e => {
+                    this.setState({ mailSent: false })
+                    this.setState({ error: true })
+                });
 
-        </div >
-    )
+        }
+        return (
+            <div className={style.Contact}>
+                <div className={style.wrapper}>
+                    <h1>Contact me</h1>
+                </div>
+                <div className={style.FormWrapper}>
+                    <label>Email:</label>
+
+                    <input
+                        onChange={(event) => handleChange(event, 'mail')}
+                        placeholder="Your email here..."
+                        type="text"
+                        value={this.state.mail}>
+                    </input>
+
+                    <label>Message:</label>
+                    <textarea
+                        onChange={(event) => handleChange(event, 'text')}
+                        placeholder="Your message here..."
+                        value={this.state.text}
+                    >
+                    </textarea>
+
+                    <button onClick={submitHandler}>Send mail</button>
+                </div>
+
+                {
+                    this.state.error ?
+                        <label
+                            style={{ color: 'red' }}
+                        >
+                            Something went wrong, please try again later
+                        </label>
+                        : null
+                }
+
+                {
+                    this.state.mailSent ?
+                        <label
+                            style={{ color: 'green' }}
+                        >
+                            Your mail has been sent!
+                        </label>
+                        : null
+                }
+
+            </div >
+        )
+    }
 }
 
-export default contact;
+export default Contact;
