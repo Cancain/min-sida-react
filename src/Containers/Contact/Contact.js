@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import style from './Contact.module.css';
+import { fail } from 'assert';
 
 class Contact extends Component {
 
@@ -45,6 +46,7 @@ class Contact extends Component {
                         //If successfull, updates error and mailSent state, and empties state of text and mail
                         this.setState({ error: false });
                         this.setState({ mailSent: true });
+                        this.setState({ empty: false });
                         resetText()
                     })
                     .catch(e => {
@@ -52,6 +54,7 @@ class Contact extends Component {
                         //Sets mailSent to false, so the wrong response won't be shown
                         this.setState({ mailSent: false });
                         this.setState({ error: true });
+                        this.setState({ empty: false });
                     });
             } else {
                 //If either mail or text is empty
