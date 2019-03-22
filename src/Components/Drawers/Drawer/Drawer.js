@@ -14,7 +14,7 @@ const drawer = (props) => {
         >
 
             <div className={style.HeadlineWrapper}>
-                {props.text}
+                {props.text}aköa,
             </div >
 
         </div >
