@@ -49,6 +49,11 @@ class SkillProfiler extends Component {
                         index: '1a',
                         name: 'Wordpress',
                         level: 2
+                    },
+                    {
+                        index: '1b',
+                        name: 'PDO',
+                        level: 2
                     }
                 ]
             },
@@ -95,13 +100,7 @@ class SkillProfiler extends Component {
                 index: 4,
                 name: 'SQL',
                 level: 2,
-                subItems: [
-                    {
-                        index: '4a',
-                        name: 'PDO',
-                        level: 2
-                    }
-                ]
+                subItems: []
             },
             {
                 index: 5,
