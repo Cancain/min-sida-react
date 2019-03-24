@@ -11,6 +11,7 @@
     to{transform: translate(0px, 0px) rotate(0deg) scale(1, 1)}         
 }
 @keyframes menuClosed2 {
+    from{opacity: 0;}
     to{opacity: 1}
 }
 @keyframes menuClosed3 {
