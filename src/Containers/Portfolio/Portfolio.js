@@ -3,17 +3,21 @@ import axios from 'axios';
 
 import style from './Portfolio.module.css';
 import Drawers from '../../Components/Drawers/Drawers';
+import Spinner from '../../Components/Spinner/Spinner';
 
 
 class Portfolio extends Component {
 
     state = {
         portfolio: null,
-        links: null
+        links: null,
+        loading: false,
+        error: false
     }
 
     componentDidMount() {
         //Gets all the portfolio-posts from a database and adds to state
+        this.setState({ loading: true })
         axios.get('Portfolios/getAllPortfolios/-1')
             .then(response => {
                 const portfolio = response.data.portfolio;
@@ -22,6 +26,10 @@ class Portfolio extends Component {
                     portfolio: portfolio,
                     links: links
                 })
+                this.setState({ loading: false })
+            })
+            .catch(error => {
+                this.setState({ error: error.message })
             })
     }
 
@@ -41,7 +49,6 @@ class Portfolio extends Component {
                         if it matches it renders the links with url and text */}
                             <div className={style.LinkWrapper}>
                                 {
-
                                     this.state.links.map(link => {
                                         return link.portfolioId === post.id ?
                                             <div
@@ -70,9 +77,7 @@ class Portfolio extends Component {
                 <div className={style.wrapper}>
                     <h1>Portfolio</h1>
                 </div>
-
-
-                {portfolioHandler}
+                {this.state.loading ? <Spinner /> : portfolioHandler}
             </div >
         )
     }
