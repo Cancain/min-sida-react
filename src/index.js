@@ -6,6 +6,8 @@ import './index.css';
 import App from './Containers/App';
 import * as serviceWorker from './serviceWorker';
 
+//http://localhost/min-sida-react/backend/Libraries/bootstrap.php/ <-for local testing
+//https://tomaseriksson.net/backend/Libraries/bootstrap.php/ <-before deployment
 axios.defaults.baseURL = 'http://localhost/min-sida-react/backend/Libraries/bootstrap.php/';
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -6,7 +6,8 @@ const RLProfileImage = (props) => {
 
     const style = {
         borderRadius: '7px',
-        marginTop: '3vh'
+        marginTop: '3vh',
+        marginBottom: '3vh'
     }
 
     return (
