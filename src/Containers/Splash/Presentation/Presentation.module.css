@@ -4,8 +4,6 @@
 
 .Presentation {
     width: 100vw;
-    margin: 50% 0 0 0;
-    height: 100vh;
 }
 
 .Presentation i {
@@ -17,7 +15,7 @@
 
 .wrapper {
     position: fixed;
-    bottom: 0;
+    bottom: -10px;
 }
 
 @media (min-width: 1025px){

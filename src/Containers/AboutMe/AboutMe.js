@@ -24,8 +24,9 @@ const aboutMe = (props) => {
                 <Drawers
                     description={'Introduction'}
                 >
-                    <RLProfileImage />
+                    
                     <h3>Adventurous nerd with an immense passion for coding and design.</h3>
+                    <RLProfileImage />
                     <p> My name is Tomas Eriksson and live just outside of Gävle in Sweden.<br></br><br></br>
 
                         I used to work as a teacher but is now setting my aim for a new career in IT.<br></br><br></br>

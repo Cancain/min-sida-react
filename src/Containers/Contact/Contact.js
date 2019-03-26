@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import style from './Contact.module.css';
-import { fail } from 'assert';
 
 class Contact extends Component {
 
@@ -44,23 +43,17 @@ class Contact extends Component {
                     'Users/sendMail/-1', data)
                     .then(response => {
                         //If successfull, updates error and mailSent state, and empties state of text and mail
-                        this.setState({ error: false });
-                        this.setState({ mailSent: true });
-                        this.setState({ empty: false });
+                        this.setState({ error: false, mailSent: true, empty: false });
                         resetText()
                     })
                     .catch(e => {
                         //In case of error sets error to true and displays an error message 
                         //Sets mailSent to false, so the wrong response won't be shown
-                        this.setState({ mailSent: false });
-                        this.setState({ error: true });
-                        this.setState({ empty: false });
+                        this.setState({ mailSent: false, error: true, empty: false });
                     });
             } else {
                 //If either mail or text is empty
-                this.setState({ empty: true });
-                this.setState({ mailSent: false });
-                this.setState({ error: false });
+                this.setState({ empty: true, mailSent: false, error: false });
             }
         }
 
