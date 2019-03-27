@@ -40,7 +40,7 @@ const aboutMe = (props) => {
                         In addition to to web-design I spend time in the game engine Unity and Phaser, making simple games as a hobby.<br></br>
                         There I use C# (unity) and JavaScript (phaser) for scripting, blender for 3d-modeling/animation and gimp/spriter for 2d-sprites and animation.<br></br><br></br>
 
-                        I will continually add projects to this site showing off what I do under “projects”.</p><br></br>
+                        I will continually add projects to this site showing off what I do under “portfolio”.</p><br></br>
                 </Drawers>
 
                 <Drawers
