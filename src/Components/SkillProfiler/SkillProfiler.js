@@ -29,13 +29,18 @@ class SkillProfiler extends Component {
         subItems: [
           {
             index: "1a",
-            name: "React",
-            level: 3
+            name: "React Web",
+            level: 4
           },
           {
             index: "1b",
+            name: "React Native",
+            level: 2
+          },
+          {
+            index: "1c",
             name: "Node.js",
-            level: 1
+            level: 2
           }
         ]
       },
@@ -47,10 +52,15 @@ class SkillProfiler extends Component {
           {
             index: "2a",
             name: "Wordpress",
-            level: 2
+            level: 3
           },
           {
             index: "2b",
+            name: "Drupal",
+            level: 3
+          },
+          {
+            index: "2c",
             name: "PDO",
             level: 2
           }
@@ -75,6 +85,11 @@ class SkillProfiler extends Component {
             index: "3c",
             name: "Xamarin",
             level: 1
+          },
+          {
+            index: "3d",
+            name: "Unity game engine",
+            level: 2
           }
         ]
       },
@@ -114,17 +129,29 @@ class SkillProfiler extends Component {
         subItems: []
       },
       {
+        index: 7,
+        name: "Linux",
+        level: 3,
+        subItems: []
+      },
+      {
         index: 8,
+        name: "Rust",
+        level: 1,
+        subItems: []
+      },
+      {
+        index: 9,
         name: "English",
         level: 4,
         subItems: [
           {
-            index: "8a",
+            index: "9a",
             name: "Written",
             level: 4
           },
           {
-            index: "8b",
+            index: "9b",
             name: "Spoken",
             level: 4
           }
