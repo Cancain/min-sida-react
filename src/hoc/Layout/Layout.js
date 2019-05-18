@@ -7,7 +7,6 @@ import AboutMe from "../../Containers/AboutMe/AboutMe";
 import Portfolio from "../../Containers/Portfolio/Portfolio";
 import Contact from "../../Containers/Contact/Contact";
 import Modal from "../Modal/Modal";
-import LogIn from "../../Containers/LogIn/LogIn";
 import AddPortfolio from "../../Components/AddPortfolio/AddPortfolio";
 import MediaIcons from "../../Components/MediaIcons/MediaIcons";
 
