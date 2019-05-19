@@ -41,6 +41,11 @@ class SkillProfiler extends Component {
             index: "1c",
             name: "Node.js",
             level: 2
+          },
+          {
+            index: "1d",
+            name: "Phaser Game Engine",
+            level: 1
           }
         ]
       },
@@ -126,13 +131,13 @@ class SkillProfiler extends Component {
         index: 7,
         name: "Linux",
         level: 3,
-        subItems: []
-      },
-      {
-        index: 7,
-        name: "Linux",
-        level: 3,
-        subItems: []
+        subItems: [
+          {
+            index: "7a",
+            name: "Bash Scripting",
+            level: 1
+          }
+        ]
       },
       {
         index: 8,
