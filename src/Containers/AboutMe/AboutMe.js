@@ -30,17 +30,15 @@ const aboutMe = props => {
           <br />I used to work as a teacher but is now setting my aim for a new
           career in IT.
           <br />
-          <br />I am self taught in C#, java, html/css, javascript and PHP,
-          mostly learning from courses on Pluralsight and Udemy. My main
-          programming languagess right now are PHP for backend and
-          Javascript(mostly React) for frontend.
+          <br />I am self taught in html/css, javascript, PHP and rust. I also
+          dabble in C# .net and Java. mostly learning from courses on
+          Pluralsight and Udemy.
+          <br />
+          My main languagess right now are JavaScript (MERN-stack) and some PHP.
           <br />
           <br />
-          My short hand goal right now is to dive deeper into React and it’s
-          related frameworks and modules.
-          <br />
-          <br />I wish to learn either c++ or rust at a later date to get into
-          web-assembly.
+          My short hand goal right now is to dive deeper into the MERN-stack
+          while also introducing myself to rust and web-assembly.
           <br />
           <br />
           In addition to to web-design I spend time in the game engine Unity and
