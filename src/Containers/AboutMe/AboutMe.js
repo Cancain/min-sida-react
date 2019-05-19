@@ -113,6 +113,11 @@ const aboutMe = props => {
                 JavaScript Objects and Prototypes
               </a>
             </li>
+            <li>
+              <a href="https://www.udemy.com/react-the-complete-guide-incl-redux/">
+                React - The Complete Guide
+              </a>
+            </li>
           </ul>
         </Drawers>
         <Drawers description={"PHP"} subDrawer={true}>
@@ -126,11 +131,6 @@ const aboutMe = props => {
         </Drawers>
         <Drawers description={"Ongoing courses"} subDrawer={true}>
           <ul>
-            <li>
-              <a href="https://www.udemy.com/react-the-complete-guide-incl-redux/">
-                React - The Complete Guide
-              </a>
-            </li>
             <li>
               <a href="https://www.udemy.com/mern-stack-front-to-back">
                 MERN Stack Front To Back: Full Stack React, Redux & Node.js
