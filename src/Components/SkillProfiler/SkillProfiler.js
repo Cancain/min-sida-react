@@ -19,6 +19,11 @@ class SkillProfiler extends Component {
             index: "0b",
             name: "CSS",
             level: 3
+          },
+          {
+            index: "0c",
+            name: "SASS",
+            level: 2
           }
         ]
       },
@@ -46,6 +51,11 @@ class SkillProfiler extends Component {
             index: "1d",
             name: "Phaser Game Engine",
             level: 1
+          },
+          {
+            index: "1e",
+            name: "Handlebars",
+            level: 2
           }
         ]
       },
